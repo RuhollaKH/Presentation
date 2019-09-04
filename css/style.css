@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'yekan';
+  src: url("./fonts/yekan/Yekan.eot") format("eot"), url("./fonts/yekan/Yekan.woff") format("woff"), url("./fonts/yekan/Yekan.ttf") format("ttf");
+}
+
+body #impress {
+  font-family: yekan;
+}
+
+body #impress .slide {
+  font-family: yekan;
+  direction: rtl;
+}
+
+body #impress .slide .my_box .my_title {
+  direction: rtl;
+  text-align: center;
+  font-size: 40px;
+  color: blueviolet;
+  margin-top: 60px;
+}
+
+body #impress .slide .math_inline {
+  margin: 0 10px 0 10px;
+}
+
+body #impress .slide .blue_box {
+  border-radius: 10px;
+  text-align: center;
+  height: 120px;
+  width: 700px;
+  padding-top: 80px;
+  margin-top: 50px;
+  padding-left: 72px;
+  background-color: blue;
+  color: white;
+}
+
+body #impress .slide .my_footer {
+  text-align: center;
+  margin-top: 100px;
+}
+/*# sourceMappingURL=style.css.map */
