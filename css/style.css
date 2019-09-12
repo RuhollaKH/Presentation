@@ -3,16 +3,33 @@
   src: url("./fonts/yekan/Yekan.eot") format("eot"), url("./fonts/yekan/Yekan.woff") format("woff"), url("./fonts/yekan/Yekan.ttf") format("ttf");
 }
 
-body #impress {
-  font-family: yekan;
+@font-face {
+  font-family: 'sahel';
+  src: url("./fonts/sahel/Sahel.eot") format("eot"), url("./fonts/sahel/Sahel.woff") format("woff"), url("./fonts/sahel/Sahel.ttf") format("ttf");
 }
 
-body #impress .slide {
-  font-family: yekan;
+@font-face {
+  font-family: 'samim';
+  src: url("./fonts/samim/Samim.eot") format("eot"), url("./fonts/samim/Samim.woff") format("woff"), url("./fonts/samim/Samim.ttf") format("ttf");
+}
+
+body {
+  background-color: white;
+  padding: 10;
+}
+
+body baCK
+#impress .slide {
+  font-family: sahel;
   direction: rtl;
+  display: block;
+  width: 900px;
+  height: 500px;
+  padding: 50px;
 }
 
-body #impress .slide .my_box .my_title {
+body baCK
+#impress .slide .my_box .my_title {
   direction: rtl;
   text-align: center;
   font-size: 40px;
@@ -20,11 +37,13 @@ body #impress .slide .my_box .my_title {
   margin-top: 60px;
 }
 
-body #impress .slide .math_inline {
+body baCK
+#impress .slide .math_inline {
   margin: 0 10px 0 10px;
 }
 
-body #impress .slide .blue_box {
+body baCK
+#impress .slide .blue_box {
   border-radius: 10px;
   text-align: center;
   height: 120px;
@@ -36,8 +55,87 @@ body #impress .slide .blue_box {
   color: white;
 }
 
-body #impress .slide .my_footer {
+body baCK
+#impress .slide .my_footer {
   text-align: center;
   margin-top: 100px;
+}
+
+body baCK
+#impress .slide .formula {
+  margin-bottom: 80px;
+  padding: 5px;
+  position: relative;
+}
+
+body baCK
+#impress .slide .formula .formula_l {
+  position: absolute;
+  left: 0px;
+}
+
+body baCK
+#impress .slide .formula .formula_c {
+  position: absolute;
+  left: +500px;
+}
+
+body baCK
+#impress .slide .formula .formula_r {
+  position: absolute;
+}
+
+body baCK
+#impress .slide .arrange {
+  position: relative;
+  border: 3px solid red;
+  height: 65px;
+  display: block;
+}
+
+body baCK
+#impress .slide .arrange .field_1 {
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  width: 250px;
+  text-align: left;
+}
+
+body baCK
+#impress .slide .arrange .field_2 {
+  border: 1px solid yellow;
+  position: absolute;
+  left: 285px;
+}
+
+body baCK
+#impress .slide .arrange .field_3 {
+  position: absolute;
+  left: 350px;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+}
+
+body baCK
+#impress .slide .arrange .field_4 {
+  border: 1px solid yellow;
+  position: absolute;
+  left: 445px;
+}
+
+body baCK
+#impress .slide .arrange .field_5 {
+  border: 1px solid black;
+  position: absolute;
+  left: 535px;
+  width: 250px;
+  text-align: right;
+}
+
+body baCK
+#impress .slide .circ li span.iicon {
+  font-size: 18px !important;
 }
 /*# sourceMappingURL=style.css.map */

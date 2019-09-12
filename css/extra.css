@@ -1,0 +1,201 @@
+/* Boxes*/
+.resale_box {
+    font-weight: bold;
+    font-size: 1em; 
+    padding: 30px; 
+    text-align:center;
+    border: 1px solid white; 
+    background-color: white; 
+    /* color: white; */
+  }
+  .title_box{
+    height: 135px;
+    /* font-weight: bold; */
+    font-size: 50px; 
+    padding: 30px; 
+    text-align:center;
+    border: 5px solid; 
+    border-radius: 22px;
+    background-color: rgb(2, 2, 99); 
+    color: white;
+    line-height: 70px;
+  }
+  .auther_box{
+    padding: 40px;
+    text-align:center;
+    /* font-family: Yas, XB Zar; */
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .section_box{
+    height: 300px;
+    weight: 300px;
+    margin: 50px;
+    text-align: center;
+    line-height: 70px;
+  }
+  .math_box{
+    /* padding:0 0 30px 0; */
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+  }
+  .fa_box{
+    font-size: 20px; 
+    /* font-weight: bold; */
+    font-family: yekan;
+  }
+  .box1{
+    margin: 20px;
+    text-align: center;
+    border: 1px solid rgb(7, 7, 165);
+    border-radius: 20px;
+    background-color: rgb(7, 7, 165);
+    color: white;
+  }
+  .box2{
+    font-size: 20px;
+    margin: 20px;
+    direction: ltr !important;
+    border-radius: 20px;
+  }
+  .boxdef{
+    text-align: center;
+    padding:10px;
+    margin-bottom: 10px;
+    border:1px solid #320895;
+    border-radius: 40px 0 40px 0;
+    background-color: #320895;
+    font-size: 20px;
+    color: white;
+    font-family: yekan;
+  }
+  .boxalg{
+    text-align: center;
+    padding:10px;
+    /* border:1px solid #835fda; */
+    border-radius: 0 40px 0 40px;
+    background-color: #835fda;
+    font-size: 20px;
+    color: white;
+    font-family: yekan;
+    width: 100px;
+  }
+  .boxres{
+    text-align: center;
+    /* padding:10px; */
+    border:1px solid #a10606;
+    border-radius: 20px;
+    background-color: #a10606;
+    font-size: 20px;
+    color: white;
+  }
+  .tarif{
+    padding: 20px 20px; 
+    margin: 20px;
+    text-align: right;
+    font-family: Yekan;
+    font-size: 20px;
+    border: 1px solid rgb(7, 7, 165);
+    border-radius: 20px;
+    background-color: rgb(7, 7, 165);
+    color: white;
+  }
+  .example_box{
+      text-align: center;
+      /* padding:10px; */
+      border: 1px solid rgb(5, 182, 20);
+      border-radius: 0 40px 0 40px;
+      background-color: rgb(5, 182, 20);
+      font-size: 20px;
+      color: white;
+      font-family: yekan;
+  }
+  .example{
+    padding: 20px 20px; 
+    margin: 20px;
+    text-align: right;
+    font-family: Yekan;
+    font-size: 20px;
+    border: 1px solid rgb(5, 182, 20);
+    border-radius: 20px;
+    background-color: rgb(5, 182, 20);
+    color: white;
+  }
+  .boxthm{
+    text-align: center;
+    /* padding:10px; */
+    border:1px solid #bb0606;
+    border-radius: 20px;
+    background-color: #bb0606;
+    font-size: 20px;
+    color: white;
+    font-family: yekan;
+  }
+  /* ############################################## */
+  .right{
+    /* text-align: right; */
+    direction: rtl;
+    margin-right: 10px;
+  }
+  /* ############################################## */
+    /* FLESH */
+    /* ######################################### */
+    .flesh{
+     font-size: 50px;
+     color: rgb(228, 36, 36);
+    }
+  /* Arrows*/
+  .arrow{
+    height: 50px;
+    width: 50px;
+    border:1px solid white;
+  }
+  .flex-container {
+    margin-top: 20px;
+    display: flex;
+    background-color: rgb(253, 253, 253);
+  }
+  
+  .flex-container > div {
+    /* background-color: #fffefe; */
+    margin: 0px;
+    padding: 0 10px;
+    font-size: 30px;
+  }
+  .def{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(17, 17, 228);
+    border: 1px solid rgb(17, 11, 228);
+    /* border-radius: 20px; */
+    width: 250px;
+  }
+  .greentext{
+    color: rgb(4, 107, 18);
+  }
+  .redtext{
+    color: rgb(153, 6, 6);
+  }
+  /* Animations */
+  @keyframes hing {
+    0% {
+      transform-origin: center right;
+      animation-timing-function: ease-in-out;
+    }
+  
+    20%,
+    60% {
+      transform: rotate3d(0, 0, 1, -80deg);
+      transform-origin: center right;
+      animation-timing-function: ease-in-out;
+    }
+  
+    40%,
+    80% {
+      transform: rotate3d(0, 0, 1, -60deg);
+      transform-origin: center right;
+      animation-timing-function: ease-in-out;
+      opacity: 1;
+    }  
