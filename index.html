@@ -5,40 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
     <link rel="stylesheet" href="./css/impress-demo.css">
     <link rel="stylesheet" href="./css/extra.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/algorithm.css">
     <link rel="stylesheet" href="./css/impress-TFA.css">
-    <link rel="stylesheet" href="./css/lib/faws/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/faws/css/font-awesome.min.css">
     <link rel="stylesheet" href="./lib/animate.css">
     <link rel="stylesheet" href="./css/pseudocode.css">
+    <link rel="stylesheet" href="./css/prism.css">
+
+    <!-- <link rel="stylesheet" href="./css/algorithm.css"> -->
     <!-- <script src="./js/script.js"></script> -->
     <!-- <script src="./node_modules/mathjax/MathJax.js"></script> -->
     
-    <title>همسانی ها</title>
+    <title>
+      همسانی های بین خم‌های بیضوی و کاربرد آنها در رمزنگاری
+    </title>
+
+    <!-- <style>
+      body #impress #algorithm .alg_code {
+      font-family: serif;
+      margin-left: 20px;
+      font-size: 22px !important;
+      font-style: italic;
+      }
+      .slide {
+        position: relative;
+      }
+      .page_number{
+        position: absolute;
+        bottom: -20px;
+        left: 0px;
+        z-index: 1000;
+        color: blueviolet;
+      }
+    </style> -->
+    <style>
+      .page_number {
+        display: hidden !important ;
+      }
+    </style>
     
 
 </head>
 <body>
 
     <div id="impress">
-<!-- Slide title -->
-        <div id="intro"  class="step slide" data-x="0" data-y="0"  >
+      <!-- Slide title -->
+      <div id="intro"  class="step slide" data-x="0" data-y="0" >
             <!-- <img class="introImages imgCenter animated bounceInRight" src="img/AngularJS-large.png" /><br>
               <img  class="introImages imgCenter animated bounceInLeft "  src="img/tfaLarge.jpg" width="500" />-->
               <h2 class="resale_box">
               ارائه دفاع از رساله دکتری
               </h2>
               <h1 class="title_box">
-                همسانی بین خم‌های بیضوی و کاربرد آن در رمزنگاری
+                همسانی‌های بین خم‌های بیضوی و کاربرد آن در رمزنگاری
               </h1>
               <h2 class="auther_box">
               ارائه کننده: روح‌اله خداکرمیان گیلان
               </h2>
-          </div>
+      </div>
       <!-- Slide contents -->
-        <div id="contents" class="step slide twoColm" data-x="1000" data-y="0"  >
+      <div id="contents" class="step slide twoColm" data-x="1000" data-y="0"  >
           <h3 class="title animated pulse">فهرست مطالب </h3>
           <ul class="em1">
             <li class="substep">فصل اول: خم‌ بیضوی، همسانی و زوجیت  </li>
@@ -46,19 +77,20 @@
             <li class="substep">فصل سوم: حساب روی میدان‌های مناسب برای زوجیت </li>
             <li class="substep">فصل چهارم: طرح شناسایی مبتنی بر شناسه کاربری بدون گواهینامه بر اساس همسانی</li>
           </ul> 
-        </div>
-<!-- Slide EC Section -->
-        <div id="ec1-section" class="step opacity slide" data-x="2000" data-y="0">
+      </div>
+      <!-- Slide EC Section -->
+      <div id="ec1-section" class="step opacity slide" data-x="2000" data-y="0">
             <h2 class="section_box em15">
               خم‌های بیضوی، همسانی و کاربرد آن‌ها در رمزنگاری
             </h2>   
-        </div>
-<!-- Slide EC definition -->
-        <div id="ec_define" class="step opacity slide" data-x="3000" data-y="0">
+            <p class='page_number' style="text-align:center">1</p>
+      </div>
+      <!-- Slide EC definition -->
+      <div id="ec_define" class="step opacity slide" data-x="3000" data-y="0">
           <!-- A container contain 3 items-->
             <div class="formula">
                 <span class="math_box formula_l" style="float:left">
-                    $y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0$
+                    $E/K=\{(x,y)\in \bar{K}^2\ |\ y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0\} \cup \{\mathcal{O}\}$
                       <!-- $$E/K=$$ -->
                       <!-- $$\{(x,y)\in \bar{K}\ |\ y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0\}$$ -->
                       <!-- $$\cup \{\mathcal{O}\}$$  -->
@@ -68,44 +100,47 @@
                   <span class="fa_box formula_r" style="float: right">
                       خم بیضوی روی  K
                   </span>
+                  
             </div>
-            <!-- Container end-->
-            <!--<div class="flex-container"> A container
-              <div>
-                  <p class="fa_box">
-                      مجموعه نقاط $K$ گویای
-                  </p>
-              </div>
-              <div>
-                  <img src="./img/rarrow.jpg" alt="This is a location for a picture" class="arrow">
-              </div>
-              <div>
-                  <p id="ec-bastar" class="math_box">
-                      $E(K)=\{(x,y)\in K\ |\ y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0\}$
-                  </p>
-              </div>
-          </div> Container end-->
-          <!-- <div class="flex-container"> A container
-            <div>
-                <p class="fa_box">
+            <div class="formula" style="margin-top: 30px;">
+              <span class="math_box formula_l" style="float:left">
+                $E(K)=\{(x,y)\in K^2\ |\ y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0\}$
+                  <!-- $$E/K=$$ -->
+                  <!-- $$\{(x,y)\in \bar{K}\ |\ y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0\}$$ -->
+                  <!-- $$\cup \{\mathcal{O}\}$$  -->
+              </span>
+              <span class="flesh formula_c" >&#8669;</span>
+
+              <span class="fa_box formula_r" style="float: right">
+                مجموعه نقاط $K$ گویا
+              </span>
+            </div>
+            <div class="formula" style="margin-top: 30px;">
+              <span class="math_box formula_l" style="float:left">
+                $E: y^2=x^3+Ax+B,\ A,B\in K$
+                  <!-- $$E/K=$$ -->
+                  <!-- $$\{(x,y)\in \bar{K}\ |\ y^2+a_1xy+a_3-(x^3+a_2x^2+a_4x+a_6)=0\}$$ -->
+                  <!-- $$\cup \{\mathcal{O}\}$$  -->
+              </span>
+              <span class="flesh formula_c" >&#8669;</span>
+
+              <span class="fa_box formula_r" style="float: right">
                 فرم کوتاه وایرشتراس    
-                </p>
+              </span>
             </div>
-            <div>
-                <img src="./img/rarrow.jpg" alt="This is a location for a picture" class="arrow">
+            <div class="substep formula_c" style="margin:50px;">
+              <img src="./img/ec.jpg">  
             </div>
-            <div>
-                <p id="ec-bastar" class="math_box">
-                    $E: y^2=x^3+Ax+B,\ A,B\in K$
-                </p>
-            </div>
-        </div> Container end -->
-        <div style="text-align: center;">
-          <img src="./img/ec.jpg">  
-        </div>
-        </div>
-<!-- Slide ECDL -->
-      <div id="group" class="step slide" data-x="4000" data-y="0">
+            <!-- <div class="formula">
+              <p class="math_box formula_c">
+                $x_{P+Q}=(\frac{y_Q-y_P}{x_Q-x_P})^2-x_P-x_Q$
+                $y_{P+Q}=(\frac{y_Q-y_P}{x_Q-x_P})(x_P-x)-y_1$
+              </p>
+            </div> -->
+            <p class='page_number' style="text-align:center">2</p>
+      </div>
+      <!-- Slide ECDL -->
+      <div id="group" class="step slide" data-x="4000" data-y="1000">
         <div style="margin-bottom: 30px;">
           <p>
               ضرب اسکالر:
@@ -126,19 +161,20 @@
             <p>
                 مساله‌ی لگاریتم گسسته روی خم‌های بیضوی:
             </p>
-            <div class="formula" style="margin-top: 50px;">
-                          
+            <div class="formula" style="margin-top: 50px;direction: ltr">
               <span class="math_box formula_l" style="left: 100px !important">
                   $E/K, \quad P,Q\in E,\quad Q=[n]P$
               </span>
               <span class="flesh formula_c">&#8669;</span>
+              <!-- <i class="fa fa-arrow-right" aria-hidden="true"></i> -->
               <span class="math_box formula_r" style="left: 650px">
                   $n$
               </span>
             </div>
         </div>
+        <p class='page_number' style="text-align:center">3</p>
       </div>
-<!-- Slide Torsions and supersingular -->
+      <!-- Slide Torsions and supersingular -->
       <div id="supersingular" class="step slide" data-x="5000" data-y="0">
           <ul>
             <li class="formula">
@@ -149,7 +185,7 @@
                 </span>
                 <span class="flesh formula_c">&#8669;</span>
                 <!-- <img src="./img/rarrow.jpg" alt="This is a location for a picture" class="arrow f"> -->
-                <span id="ec-bastar" class="math_box formula_l">
+                <span id="ec-bastar" class="math_box formula_l" style="font-size: 24px">
                     $j(E)=1728\frac{4A^3}{4A^3+27B^2}‎$
                 </span>
             </li>
@@ -158,7 +194,7 @@
                     نقاط تابی از مرتبه n 
                 </span>
                 <span class="flesh formula_c">&#8669;</span>
-                <span id="ec-bastar" class="math_box formula_l">
+                <span id="ec-bastar" class="math_box formula_l" style="font-size: 24px">
                     $‎E[n]=\{P\in E(\bar{K})\ |\ [n](P)=\mathcal{O}‎ \}$
                 </span>
             </li>
@@ -167,62 +203,88 @@
                     خم سوپرسینگولار 
                 </span>
                 <span class="flesh formula_c">&#8669;</span>
-                <span id="ec-bastar" class="math_box formula_l">
+                <span id="ec-bastar" class="math_box formula_l" style="font-size: 24px">
                     $char(K)=p,\ ‎E[p]=\{\mathcal{O}‎ \}$ 
                 </span>
 
             </li>
           </ul>
-        </div>
-        <!-- Slide isogeny applications -->
-        <div id="isogenyhistory" class="step slide opacity" data-x="5000" data-y="1000">
-          <h6 class="title animated pulse">
-          کاربرد همسانی:  
-          </h6>
-          <ul class="em1">
-            <li class="substep">
-               بهبود الگوریتم اسکوف
-               ‎ در شمارش تعداد نقاط یک خم بیضوی
-               (کوجینس،1994) 
-            </li>
-            <li class="substep">
-                محاسبه‌ی چندجمله‌ای مدولار
-                (لَوتر و چارلز، 2005)
-            </li>
-            <li class="substep">
-              محاسبه چندجمله‌ای هیلبرت
-              (سادرلند، 2011)
-            </li>
-            <!-- <li class="substep">فصل چهارم: طرح شناسایی مبتنی بر شناسه کاربری بدون گواهینامه بر اساس همسانی</li> -->
-          </ul> 
-        </div>
+          <p class='page_number' style="text-align:center">3</p>
+      </div>
+      <!-- Slide isogeny applications -->
+      <div id="isogenyhistory" class="step slide opacity" data-x="5000" data-y="1000">
+        <p class='page_number' style="text-align:center">4</p>
+        <h6 class="title animated pulse">
+        کاربرد همسانی:  
+        </h6>
+        <ul class="em1">
+          <li class="substep">
+              بهبود الگوریتم اسکوف
+              ‎ در شمارش تعداد نقاط یک خم بیضوی
+              (کوجینس،1994) 
+          </li>
+          <li class="substep">
+              محاسبه‌ی چندجمله‌ای مدولار
+              (لَوتر و چارلز، 2005)
+          </li>
+          <li class="substep">
+            محاسبه چندجمله‌ای هیلبرت
+            (سادرلند، 2011)
+          </li>
+          <!-- <li class="substep">فصل چهارم: طرح شناسایی مبتنی بر شناسه کاربری بدون گواهینامه بر اساس همسانی</li> -->
+        </ul> 
+        <ul style="color:blue;">
+          <li class="substep">
+            تابع درهم‌ساز 
+            (لوتر و همکارانش، 2009)
+          </li>
+          <li class="substep">
+            تبادل کلید 
+            (جائو و دفئو، 2011)
+          </li>
+        </ul>
+        
+      </div>
       <!-- Slide Isogeny -->
-      <div id="isogeny" class="step" style="text-align: right" data-x="6000" data-y="0">
-        <p class="boxdef">
-          همسانی
-        </p>
-        <!-- <span class="math_box">
-          $\phi(\mathcal{O}_1)=\mathcal{O}_2;$
-        </span>-->
-        <span class="fa_box">
-          یک همسانی
-        </span>
-        <span class="math_box">
-          $\phi: E_1\longrightarrow E_2$
-        </span>
-        <span class="fa_box">
-          یک مورفیسم جبری است که
-        </span>
-        <p class="math_box">
-          $\phi(\mathcal{O}_1)=\mathcal{O}_2;$
-        </p>
-        <p class="math_box" style="text-align: center;">
-          $‎\phi (x,y)=\left(\phi_1(x)‎, ‎y\phi_2(x)+\phi_3(x)\right)‎$
-        </p>
-        <div id="isogenyexample" class="box1 substep">
-          <p class="example_box">
-              مثال
+      <div id="isogeny" class="step slide" style="text-align: right" data-x="6000" data-y="0">
+        <div style="margin-bottom: 20px;">
+          <p class="boxdef" style="font-size: 32px">
+            همسانی
           </p>
+          <!-- <span class="math_box">
+            $\phi(\mathcal{O}_1)=\mathcal{O}_2;$
+          </span>-->
+          <span class="fa_box">
+            یک همسانی
+          </span>
+          <span class="math_box">
+            $\phi: E_1\longrightarrow E_2$
+          </span>
+          <span class="fa_box">
+            یک مورفیسم جبری است که
+          </span>
+          <span class="math_box">
+            $\phi(\mathcal{O}_1)=\mathcal{O}_2$.
+          </span>
+          <p class="math_box" style="text-align: center; color:rgb(0, 0, 180)">
+            $‎\phi (x,y)=\left(\phi_1(x)‎, ‎y\phi_2(x)+\phi_3(x)\right)‎$
+          </p>
+        </div>
+        <div id="isogenyexample" class="substep">
+          <!-- <p class="example_box">
+              مثال
+          </p> -->
+          <!-- <p class="math_box">
+            $\begin{array}{l}
+            (x^{221} - 567x^{219} + 1976x^{217} + 5148x^{215} - 6405x^{213} - 2769x^{211} - 7216x^{209} - 827x^{207}\\
+             - 5494x^{205} - 8715x^203 - 6771x^201 - 5917x^199 + 8409x^197 + 2926x^195 - 991x^193 + 3814x^191 - 1942x^189\\
+            + 4548x^187 - 91x^185 - 1793x^183 + 4090x^181 - 8252x^179 + 7752x^177 + 3323x^175 - 2105x^173 - 6114x^171 - 7099x^169\\
+            - 8733x^167 - 1334x^165 + 6307x^163 - 2029x^161 - 3384x^159 + 4627x^157 + 4301x^155 + 1340x^153 - 1639x^151 - 6593x^149\\
+            - 3113x^147 + 1013x^145 - 241x^143 - 5245x^141 - 3790x^139 - 5511x^137 - 8699x^135 - 5232x^133 + 3811x^131 + 1984x^129 \\
+            + 1062x^127 - 5000x^125 + 3430x^123 - 564^121 - 7180x^119 + 212x^117 - 5823x^115 + 7714x^113 + 2358x^111 - 2734x^109 \\
+            + 7145x^107 - 5927x^105 + 687x^103 + 3189x^101 + 850x^99 - 4487x^97 - 8221x^95 - 60x^93 + 2229x^91 + 1745x^89 + 7538x^87\\
+            \end{array}$
+          </p> -->
         </div>
       </div>
       <!-- Slide isogeny property -->
@@ -230,7 +292,7 @@
         <p class="boxdef">
           درجه همسانی
       </p> 
-      <p class="math_box" style="text-align: center">
+      <p class="math_box" style="text-align: center;">
         ‎$\phi_1(x)=\frac{a(x)}{b(x)};\qquad \deg(\phi)={\rm max}\{\deg(a(x)),\deg(b(x))\}.$
       </p>        
       <p class="boxdef">
@@ -254,18 +316,18 @@
       <p class="boxdef">
         دوگان همسانی $\phi$
       </p>
-        <div class="formula">
-            <p class="math_box formula_l">
-                $\forall\ \phi,\quad \exists_1\ \psi\ s.t \quad \phi o \psi=[\deg(\phi)]_{E_1} \wedge \psi o \phi=[\deg(\phi)]_{E_2}$
-            </p>
-            <span class="flesh formula_c">&#8669;</span>
+        <div class="formula" style="direction: ltr;">
+            <span class="math_box formula_l">
+                $\exists_1\ \psi\ s.t \quad \phi o \psi=[\deg(\phi)]_{E_1} \wedge \psi o \phi=[\deg(\phi)]_{E_2}$
+            </span>
+            <span class="flesh formula_c" style="margin-top: 30px;">&#8669;</span>
             <span class="math_box">
               $\hat{\phi}=\psi$
             </span>
         </div>
       </div>
       <!-- Slide isogeny computation 8-->
-      <div id="isogenyComputation" class="step opacity slide" data-x="8000" data-y="0">
+      <div id="isogenyComputation" class="step opacity slide" data-x="8000" data-y="0" data-z="1000">
         <p class="box1">
           روش محاسبه همسانی:
         </p>
@@ -283,11 +345,14 @@
                 </span> 
             </li>
           </ol>
+      
+      
+      
       </div>
       <!--Slide Velue method 9-->
-      <div id="velue" class="step opacity slide" data-x="9000" data-y="0">
+      <div id="velue" class="step opacity slide" data-x="9000" data-y="0" style="height: 800px">
         <div class="boxdef">
-          :فرمول ولو
+          فرمول ولو
           <br>
           $\begin{array}{ll}
           ‎\phi:E_1\longrightarrow E_2=E/G,&   Ker(\phi)=G\leq E_1.
@@ -329,10 +394,11 @@
                 $\phi(x,y)=(X,Y)$
               </li>
             </ul>
-            </div>
         </div>
+        <p class='page_number' style="text-align:center">4</p>
+      </div>
       <!-- Slide 10 -->
-      <div id="post_quantum_crpto" class="step slide" data-x="10000" data-y="0">
+      <div id="post_quantum_crpto" class="step slide" data-x="10000" data-y="0" style="font-size: 38px;margin-bottom: 40px">
         <ul>
           <li>
               <i class="fa fa-comment fa-lg"></i>
@@ -342,12 +408,12 @@
               </span>
           </li>
           <li>
-              <span class="fa_box">
+              <span class="fa_box" style="font-size: 30px">
                   با ورود کامپیوترهای کوانتومی باید سیستمهای رمزنگاری مبتنی بر 
             </span>
           </li>
-          <li class="animated hinge">
-              <span  style="color: red;">
+          <li class="animated bounce">
+              <span class=""  style="color: red;">
                   لگاریتم گسسته و تجزیه اعداد
               </span>
           </li>
@@ -357,67 +423,116 @@
                   </span>
           </li>
         </ul>
-          
+        <!-- <p class='page_number' style="text-align:center">4</p> -->
+      </div>
+      <!-- Slide Isogeny Problem -->
+      <div id="isogenyProblem" class="step slide" data-x="9000" data-y="1000">
+        <p class="fa_box" style="font-weight: bolder;color:blue;font-size: 30px;">
+          مساله‌ی محاسبه همسانی بین دو خم بیضوی سوپرسینگولار
+        </p>
+        <br>
+        <br>
+        <p class="fa_box" style="font-weight: bolder;font-size:30px;">
+          فرض کنیم ‎$E_1$‎ و ‎$E_2$‎ دو خم بیضوی روی میدان ‎$K$‎ و 
+          ‎$\phi:E_1\longrightarrow E_2$‎ 
+         همسانی بین آن‌ها باشد. در این صورت همسانی ‎$\phi$‎ را محاسبه کنید.
+        </p>
+        <p class='page_number' style="text-align:center">4</p>
       </div>
       <!-- Slide 11 -->
-      <div id="jaomethod" class="step opacity" data-x="11000" data-y="0">
-        <p class="boxdef" style="border-radius: 50px 50px 0 0">
+      <div id="jaomethod" class="step opacity slide" data-x="11000" data-y="0">
+        <p class="boxdef" style="border-radius: 50px 50px 0 0;font-size: 32px">
           روش جائو و دفئو برای محاسبه سریعتر همسانی
         </p>
         <div style="display: inline-block">
           <img src="./img/jao.jpg"  style="width:130px;height:130px;border-radius: 50%">
         </div>
-        <div style="width:532px;height: 50px; display: inline-block"></div>
+        <div style="width:532px;height: 50px; display: inline-block">
+        </div>
         <div style="display: inline-block">
           <img src="./img/luca.jpg" style="widows: 130px;0px;height:130px;border-radius: 50%">
         </div>
+        <p class="math_box" style="padding:10px">
+          $
+            \Large{
+              \begin{array}{ll} 
+              &\\
+              &\\
+              ord(R_0)=\ell^e, & \phi:E_0\longrightarrow E_0/R_0x
+              \end{array}
+            }
+          $
+        </p>
+        <p class="math_box">
+          $
+            \large{
+              \begin{equation}
+          ‎E_{i+1}=E_i/\langle \ell^{e-i-1}R_i\rangle‎, 
+          ‎\qquad‎
+          ‎\phi_i:E_i\longrightarrow E_{i+1}‎,
+          ‎\qquad‎
+          ‎R_{i+1}=\phi_i(R_i)‎, 
+          \qquad‎
+          i=0,\ldots,e-1
+          ‎\end{equation}
+            }
+          $
+        </p>
+        <p class='page_number' style="text-align:center">11</p>
       </div> 
       <!-- Slide Psuodorandom section  12-->
       <div id="pseudo-section" class="step slide" data-x="12000" data-y="0">
           <h2 class="section_box em15">
               تولید بیت‌های شبه‌تصادفی با استفاده از همسانی‌ها
           </h2>   
+          <p class='page_number' style="text-align:center">12</p>
       </div>
       <!-- Slide Pseudorandom history 13 -->
       <div id="psuodorandomHistory" class="step opacity slide" data-x="13000" data-y="0">
-          <p class="boxdef">
+          <p class="boxdef" style="font-size: 32px">
             مفهوم تصادفی بودن
           </p> <br>
-          <p class="boxdef substep">
+          <p class="boxdef substep" style="font-size: 32px">
             بیت‌های تصادفی و شبه تصادفی
           </p> <br>
-          <p class="boxdef substep">
+          <p class="boxdef substep" style="font-size: 32px">
             کاربرد اعداد تصادفی
           </p>
+          <p class='page_number' style="text-align:center">13</p>
       </div>
       <!-- Slide 14 -->
       <div id="tasadofi" class="step slide" data-x="14000" data-y="0">
-        <p class="boxdef">
+        <p class="boxdef" style="font-size: 32px">
           غیرقابل تمایز بودن دو مجموعه از متغیرهای تصادفی
         </p>
         <div style="margin-bottom: 40px;">
             <p style="direction: rtl;text-align: right;">
-                <span class="fa_box">
+                <span class="fa_box" style="font-size: 28px">
                     ‎در زمان چندجمله‌ای غیرقابل تمایز هستند هرگاه
                 </span>
-                <span class="math_box">
+                <span class="math_box" style="font-size: 28px">
                     $X=\{X_n\}_{n\in \mathbb{N}}, Y=\{Y_n\}_{n\in \mathbb{N}}$‎
                 </span>
-                <span class="fa_box">
+                <span class="fa_box" style="font-size: 24px">
                       دو مجموعه متغیرهای تصادفی
                 </span>
             </p>
             <p>
-                <span class="math_box" style="font-size: 17px;">
-                    ‎$\forall\ prob\ alg\ D(x,r),\quad \forall\ g(n)>0,\quad n\gg 0,\ |Pr[D(X_n,T_n)=1]-Pr[D(Y_n,T_n)=1]|<\frac{1}{g(n)}‎$‎ 
+                <span class="math_box" style="font-size: 17px;" style="font-size: 28px;">
+                    ‎$
+                    \large{  
+                      \forall\ prob\ alg\ D(x,r),\quad \forall\ g(n)>0,\quad n\gg 0,|Pr[D(X_n,T_n)=1]-Pr[D(Y_n,T_n)=1]|<\frac{1}{g(n)}
+                    }
+                      $‎ 
                 </span>
             </p>
-        </div>
-        <p class="boxdef">
-            شبه تصادفی
+      
+      </div>
+        <p class="boxdef" style="font-size: 32px">
+        مجموعه متغیرهای تصادفی شبه‌تصادفی
         </p>
         <ul class="circ" style="direction: rtl;text-align:right;" >
-            <li >
+            <li>
               <span class="fa fa-check iicon"></span>
               <span class="fa_box">
                   تابع
@@ -468,18 +583,21 @@
                   غیرقابل تمایز باشند. 
               </span>
           </p>
+        <p class='page_number' style="text-align:center">15</p>
       </div>
       <!-- Slide 15 PseudorandomGenerator -->
       <div id="pseudorandomgenerator" class="step slide opacity" data-x="15000" data-y="0">
-        <p class="boxdef">
+        <p class="boxdef" style="font-size: 28px">
           مولد شبه‌تصادفی
         </p>
+        <p style="direction: rtl;text-align: right; margin-top: 25px;">
         <span class="math_box">
           $G$
         </span>
         <span class="fa_box">
             یک الگوریتم قطعی چندجمله‌ای با ورودی و خروجی رشته‌های بیت 
-        </span><br>
+        </span>
+        </p>
         <span class="math_box">
             ‎$G$‎
         </span>
@@ -487,61 +605,77 @@
             یک مولد شبه‌تصادفی است هرگاه:
         </span>
         <ul>
-          <li class="math_box">
-            \[
-              \exists l:\mathbb{N}\longrightarrow \mathbb{N}, \forall n\in \mathbb{N}\ s.t\ l(n)>n\quad |G(s)|=l(|s|)
-            \]
+          <li>
+            <span class="fa fa-check iicon"></span>
+            <span class="math_box">
+                  $\exists l:\mathbb{N}\longrightarrow \mathbb{N}, \forall n\in \mathbb{N}\ s.t\ l(n)>n\quad |G(s)|=l(|s|)$
+            </span>
           </li>
-          <li class="math_box">
-              $\{G(U_n)\}$‎
-              با تابع 
-              ‎$l$‎
-              شبه‌تصادفی است. 
+            <li class="math_box" style="direction: rtl;text-align:right;">
+              <span class="fa fa-check iicon"></span>
+              <span class="math_box">
+                  $\{G(U_n)\}$‎
+              </span>
+              <span class="fa_box">
+                  با تابع 
+                  ‎$l$‎
+                  شبه‌تصادفی است. 
+              </span>
           </li>
         </ul>
-          <p class="fa_box" style="color:brown">
+          <p class="fa_box" style="color:brown;margin-top: 30px;">
           تابع 
-          ‎$l$‎،
+          ‎$l$‎=
           عامل گستردگی  الگوریتم ‎$G$‎
           </p>
           <p class="fa_box" style="color:brown">
               مقدار 
-              ‎$s$‎، 
-              در ورودی الگوریتم بذر
+              ‎$s$‎
+              در ورودی الگوریتم = بذر
           </p>
+          <p class='page_number' style="text-align:center">15</p>
       </div>
       <!-- Slide hardcore 16 -->
-      <div id="hardcore" class="step opacity" data-x="16000" data-y="0">
-        <p class="boxdef">
+      <div id="hardcore" class="step opacity slide" data-x="16000" data-y="0">
+        <p class="boxdef" style="font-size: 28px">
           هارد-کور
         </p>
-        <span class="fa_box">
-          تابع 
-        </span>
-        <span class="math_box">
-            $b:\{0,1\}^*\longrightarrow \{0,1\}$
-        </span>
-        <span class="fa_box">
-          یک هارد-کور برای تابع 
-        </span>
-        <span class="math_box">
-            $f:\{0,1\}^*\longrightarrow \{0,1\}^*$
-        </span>
-        <span class="fa_box">
-          است هرگاه 
-        </span>
-        <ul class="fa_box">
+        <p class="fa_text" style="text-align: right;">
+            <span class="fa_box">
+                تابع 
+              </span>
+              <span class="math_box">
+                  $b:\{0,1\}^*\longrightarrow \{0,1\}$
+              </span>
+              <span class="fa_box">
+                یک هارد-کور برای  
+              </span>
+              <span class="math_box">
+                  $f:\{0,1\}^*\longrightarrow \{0,1\}^*$
+              </span>
+              <span class="fa_box">
+                است هرگاه
+              </span>
+        </p>
+        <ul class="circ" style="direction: rtl;text-align:right;">
             <li>
-                ‎$b$‎ یک تابع قابل محاسبه در زمان چندجمله‌ای باشد. 
+              <span class="fa fa-check iicon"></span>
+              <span class="math_box">
+                  $b$‎
+              </span>
+              <span class="fa_box">
+                  یک تابع قابل محاسبه در زمان چندجمله‌ای باشد
+              </span>
             </li>
             <li>
-                ‎\[‎
-                ‎\forall\ prob\ alg\ D(x,r),\ \forall p(n), n>0,\  Pr[D(f(U_n),T_n)=b(U_n)]<\frac{1}{2}+\frac{1}{p(n)}‎.
-                ‎\]‎
+              <span class="fa fa-check iicon"></span>
+              <span class="math_box">
+                  $‎\forall\ prob\ alg\ D(x,r),\ \forall p(n), n>0,\  Pr[D(f(U_n),T_n)=b(U_n)]<\frac{1}{2}+\frac{1}{p(n)}‎$
+              </span>
             </li>
         ‎</ul>
         <div class="substep">
-            <p class="example_box">
+            <p class="example_box" style="font-size: 28px">
                 مثال
             </p>
             <p class="math_box" style="text-align: center;">
@@ -550,10 +684,10 @@
                 \end{array}$ 
             </p>
               <ul class="formula" style="text-align: center;">
-                <li>
+                <li style="display: inline-block;width: 400px;" class="substep">
                   <span class="formula_l math_box">
                     $\begin{array}{c}
-                    \color{red}{f:\mathbb{Z} \longrightarrow \mathbb{Z}}\\
+                    \color{red}{f:\mathbb{Z}_p \longrightarrow \mathbb{Z}_p}\\
                     \color{red}{f(v)=v+1}\\
                     \end{array}$
                   </span>
@@ -561,10 +695,10 @@
                       <i class="material-icons" style="font-size:48px;color:red;margin-top: 20px;"> clear </i>
                   </span>
                 </li>
-                <li>
+                <li style="display: inline-block;width: 400px" class="substep">
                     <span class="formula_l math_box">
                         $\begin{array}{c}
-                        \color{green}{f:\mathbb{Z} \longrightarrow \mathbb{Z}}\\
+                        \color{green}{f:\mathbb{Z}_p \longrightarrow \mathbb{Z}_p}\\
                         \color{green}{f(v)=v^a},& a\in \mathbb{Z}\ (secret)\\
                         \end{array}$
                       </span>
@@ -573,160 +707,253 @@
                       </span>
                 </li>
               </ul>
-          </div>
         </div>
+          <p class='page_number' style="text-align:center">16</p>
+      </div>
       <!-- Slide 17 -->
-      <div id="hardcoreTheorem" class="step opacity" data-x="17000" data-y="0">
-        <p class="boxthm">
-          مولد شبه‌تصادفی بیت
-          (قضیه)
-        </p>
-        <div class="formula">
-          <ul class="formula_l">
-            <li class="fa_box">
-                ‎$f$‎
-                یک تابع یک‌طرفه قوی
-            </li>
-            <li class="fa_box">
-                و ‎$b$
-                ‎یک هارد-کور برای ‎$f$‎ 
-            </li>
-          </ul>
-          <span class="flesh formula_c">&#8669;</span>
-          <span class="math_box">
-              $‎G(s)=b(s)\cdot b(f(s))\cdots b(f^{l(|s|)-1}(s))‎$
-          </span>
-          <span class="fa_box">
-              یک مولد شبه‌تصادفی بیت است که در آن ‎$l$‎ عامل گستردگی ‎$G$‎ است. 
-          </span>
+      <div id="hardcoreTheorem" class="step opacity slide" data-x="17000" data-y="0">
+          <div>
+              <p class="boxthm" style="font-size: 28px">
+                هارد-کور برای توابع یکطرفه (قضیه)
+              </p>
+              <ul style="text-align: right;">
+                <li>
+                  <p style="direction: rtl">
+                      <span class="math_box">
+                          $f$
+                        </span>
+                        <span class="fa_box">
+                          یک تابع یکطرفه قوی
+                        </span>
+                  </p>
+                </li>
+                <li>
+                  <p style="direction: rtl;">
+                      <span class="math_box">
+                          $r$
+                        </span>
+                        <span class="fa_box">
+                          یک رشته دودویی دلخواه
+                        </span>
+                  </p>
+                </li>
+                <li>
+                  <span class="math_box">
+                    $g(x,r)=(f(x),r)\quad s.t\ |x|=|r|$
+                  </span>
+                </li>
+                <li>
+                  <span class="math_box">
+                      $b(x,r)=\langle x,r\rangle_2$
+                  </span>
+                </li>
+              </ul>
+              <p class="fa_box" style="color: brown;text-align:center; direction:rtl;">
+                $b$
+                <span class="fa_box">
+                  یک هارد-کور برای 
+                </span>
+                $g$
+                <span class="fa_box">
+                  است. 
+                </span>
+              </p>
+            </div>
+        <div class="substep">
+            <p class="boxthm" style="font-size: 28px">
+                مولد شبه‌تصادفی بیت
+                (قضیه)
+              </p>
+              <ul style="direction: rtl;">
+                <li>
+                  <span class="math_box">
+                      $f$
+                  </span>  
+                  <span class="fa_box">‎
+                    یک تابع یک‌طرفه قوی
+                  </span>
+                </li>
+                <li>
+                  <span class="math_box">
+                      $b$
+                  </span>
+                  <span class="fa_box">
+                    ‎یک هارد-کور برای ‎‎ 
+                  </span>
+                  <span class="math_box">
+                      $f$
+                  </span>
+                </li>
+              </ul>
+                <p style="text-align: center;font-weight:bolder;">
+                    <span class="math_box" style="font-weight: bolder; color:rgb(88, 2, 2);">
+                        $‎G(s)=b(s)\cdot b(f(s))\cdots b(f^{l(|s|)-1}(s))‎$
+                    </span>
+                </p>
         </div>
+        <p class='page_number' style="text-align:center">17</p>
       </div>
       <!-- Slide  18-->
-      <div id="cspbg" class="step opacity" data-x="18000" data-y="0">
+      <div id="cspbg" class="step opacity slide" data-x="18000" data-y="0">
         <p class="boxdef">
             (CSPBG) مولد شبه‌تصادفی بیت از لحاظ رمزنگاری قوی 
         </p>
         <p class="math_box" style="text-align: center;margin-top: 30px;">
-            $G(s)=b_1, b_2,\ldots, b_r, $
+            $G(s)=b_1 b_2\cdots b_r \cdots $
         </p>
-        <ul type="bullet">
-          <li class="fa_box">
-            $b_{r+1}$
-            از زمان چندجمله‌ای قابل محاسبه باشد. 
+        <ul style="text-align: right">
+          <li>
+            <span class="math_box">
+                $b_{r+1}$
+            </span>
+            <span class="fa_box">
+                از زمان چندجمله‌ای قابل محاسبه باشد. 
+            </span>
           </li>
-          <li class="fa_box">
-              بیت‌های گام‌های بعدی غیرقابل پیش‌بینی باشند؛
+          <li>
+            <span class="fa_box">
+                بیت‌ $b_{r+1}$ بعدی غیرقابل پیش‌بینی باشد.
+            </span>
           </li>
         </ul> 
+
+        <p class='page_number' style="text-align:center">18</p>
       </div>
-        <!-- Slide  19-->
-      <div id="montgomery" class="step" data-x="19000" data-y="0">
+      <!-- Slide  21-->
+      <div id="algorithm" class="step slide opacity" data-x="21000" data-y="0" style="direction: rtl;text-align:left;font-size: 20px">
+        <!-- <p class="alg_para">
+          <span class="alg_bold"> Input :</span> 
+          <span class="alg_text_code"> The seed $$ s = m \in \mathbb{Z}^{*}_{\ell^e}$ such that $\ell m,k \in \mathbb{N} $$. </span>
+       </p>
+       <p class="alg_para">
+          <span class="alg_bold"> Output :</span>
+          <span class="alg_text_code">The strings $ output_0 \dots output_k $</span>
+       </p> -->
+
+       <p class="alg_code"> $ m_0 = m, i=0; $ </p>
+       <p class="alg_code"> $ P_0=P, Q_0=Q, K_0=K, M_0=M; $ </p>
+       <p class="alg_code"> <b> while </b> $  ~ i \leq k ~  $ <b> do </b></p>
+       <p class="alg_code alg_space"> $  P' = P_i + m_iQ_i; $ </p>
+       <p class="alg_code alg_space"> $  \Phi : M_i \rightarrow M' = M_i / \langle P' \rangle ; $ </p>
+       <p class="alg_code alg_space"> <span class="no_alg_code"> Suppose </span> &nbsp;  $M' : by^2 = cx^3 + ax + c$ where $a=a_1+a_2i, c=c_1+c_2i$ <span class="no_alg_code"> and </span> </p>
+       <p class="alg_code alg_space"> $ j-j(M') = j_1+j_2i. $ </p>
+       <p class="alg_code alg_space" style="color: red"> $ output_i = b(j); $ </p>
+       <p class="alg_code alg_space"> $ i=i+1; $ </p>
+       <p class="alg_code alg_space" style="color:red"> $ m_i = a_1+a_2+c_1+c_2+j_1+j_2; $ </p>
+       <p class="alg_code alg_space"> $ M_i=M'; $ </p>
+       <p class="alg_code alg_space"> Compute $ P_i,Q_i ~ s.t ~ M_i [ \ell^e ] = \langle P_i,Q_i \rangle $ </p>
+       <p class="alg_code"> <b>end  while </b> </p>
+       <p class="alg_code"> <b>return </b> $ output_0, \dots , output_k $ </p>
+          
+       <!-- <p class='page_number' style="text-align:center">19</p> -->
+      <p class='page_number' style="text-align:center">19</p>
+      </div>
+      <!-- Slide  19-->
+      <div id="montgomery" class="step slide" data-x="19000" data-y="0">
         <p class="boxdef">
           پیاده‌سازی
         </p>
-        <span class="math_box">
-          $M: By^2=x^3+Ax^2+x$ 
-        </span> <span class="flesh">&#8669;</span> 
-        <span class="fa_box">
-          فرم مونت گومری خم بیضوی
-        </span>
-        </p>
-        <p class="right">
-          <span class="math_box substep">
-              ‎\[‎
-              ‎\begin{array}{rl}‎
-              ‎\texttt{xADD}‎: ‎& \mathbb{F}_q\times \mathbb{F}_q\times\mathbb{F}_q\longrightarrow \mathbb{F}_q\\‎
-              ‎&x(P)‎, ‎x(Q)‎, ‎x(P-Q)\mapsto x(P+Q)\\‎
-              ‎&\color{green}{x_{P+Q}=\frac{(x_Px_Q-1)^2}{(x_P-x_Q)^2x_{P-Q}}}\\‎
-              ‎\end{array}‎
-              ‎\]‎
-          </span>
-          <span class="math_box substep">
-              ‎‎\[‎
-              ‎\begin{array}{rl}‎
-              ‎\texttt{xDBL}‎: ‎& \mathbb{F}_q \longrightarrow \mathbb{F}_q\\‎ 
-              ‎&x(P)\mapsto x(2P)‎\\
-              &\color{green}{x_{2P}=\frac{(x_P^2-1)^2}{4x_P(x_P^2+Ax_P+1)}}
-              ‎\end{array}‎
-              ‎\]
-          </span>
+        <p style="text-align: center;margin-bottom: 20px;">
           <span class="math_box">
-              \[‎ 
-              ‎\begin{array}{l}‎
-              ‎\phi‎: ‎M_{B,A}\longrightarrow F\\‎
-              ‎(x,y)\mapsto \left( \frac{(x-1)^2}{x}‎, ‎y\left( 1-\frac{1}{x^2}\right)\right)‎
-              ‎\end{array}‎
-              ‎\]‎
+            $M: By^2=x^3+Ax^2+x$ 
+          </span> 
+          <span class="flesh">&#8669;</span> 
+          <span class="fa_box">
+            فرم مونت گومری خم بیضوی
           </span>
-        </span> <span class="flesh">&#8669;</span> 
-        <span class="fa_box">
-            همسانی ازدرجه دو با هسته‌ی تولید شده توسط نقطه‌ی $P=(0,0)$
-        </span>
         </p>
+        <p class="math_box substep" style="text-align: center;">
+            <span class="math_box">
+                ‎$\begin{array}{rl}‎
+                ‎\texttt{xADD}‎: ‎& \mathbb{F}_q\times \mathbb{F}_q\times\mathbb{F}_q\longrightarrow \mathbb{F}_q\\‎
+                ‎&x(P)‎, ‎x(Q)‎, ‎x(P-Q)\mapsto x(P+Q)\\‎
+                ‎&\color{green}{x_{P+Q}=\frac{(x_Px_Q-1)^2}{(x_P-x_Q)^2x_{P-Q}}}\\‎
+                ‎\end{array}‎$
+            </span>
+        </p>
+        <p class="math_box substep" style="text-align: center;">
+            <span class="math_box">
+                ‎$\begin{array}{rl}‎
+                ‎\texttt{xDBL}‎: ‎& \mathbb{F}_q \longrightarrow \mathbb{F}_q\\‎ 
+                ‎&x(P)\mapsto x(2P)‎\\
+                &\color{green}{x_{2P}=\frac{(x_P^2-1)^2}{4x_P(x_P^2+Ax_P+1)}}
+                ‎\end{array}‎$
+            </span>
+        </p>
+        <div class="substep">
+            <span class="math_box">
+                ‎$\begin{array}{l}‎
+                ‎\phi‎: ‎M_{B,A}\longrightarrow F\\‎
+                ‎(x,y)\mapsto \left( \frac{(x-1)^2}{x}‎, ‎y\left( 1-\frac{1}{x^2}\right)\right)‎
+                ‎\end{array}‎$
+            </span>
+          </span> 
+          <span class="flesh">&#8669;</span> 
+          <span class="fa_box" style="font-size:20px">
+              همسانی ازدرجه دو با هسته‌ی تولید شده توسط نقطه‌ی $P=(0,0)$
+          </span>
+        </div>
       </div>
       <!-- Slide  20-->
-      <div id="entangled" class="step opacity" data-x="20000" data-y="0">
+      <div id="entangled" class="step opacity slide" data-x="20000" data-y="0">
         <p class="boxdef">
           همسانی‌های از درجه دو
         </p>
-          <ul class="math_box">
+          <ul style="text-align: center;">
             <li>
-                $M_{1,A}‎/ ‎\mathbb{F}_{p^2}‎: ‎y^2=x(x^2+Ax+1)$‎
+              <span class="math_box">
+                  $M_{1,A}‎/ ‎\mathbb{F}_{p^2}‎: ‎y^2=x(x^2+Ax+1),\quad A\neq 0$‎
+              </span>
             </li>
             <li>
-                $p=2^m3^n-1$
+                <span class="math_box">
+                    $p=2^m3^n-1$
+                </span>
+            </li>
+            <li> 
+              <span class="math_box">
+                  ‎$t\in \mathbb{F}_{p^2}\ s.t\ t^2\in \mathbb{F}_{p^2}\setminus \mathbb{F}_{p} $
+              </span>           
             </li>
             <li>
-                ‎$A\neq 0$‎، 
-                ‎$t\in \mathbb{F}_{p^2}\ s.t\ t^2\in \mathbb{F}_{p^2}\setminus \mathbb{F}_{p} $
+              <span class="math_box">
+                  $x_1=-A/(1+t^2)\notin {\mathbb{F}_p}^2,\ x_2=-x_1-A$
+              </span>
             </li>
             <li>
-                <p>$x_1=-A/(1+t^2)\notin {\mathbb{F}_p}^2,\ x_2=-x_1-A$</p>
-                <p> </p>
+              <span class="math_box">
+                $P'=(x_1, y_1),\qquad Q'=(x_2, y_2)$
+              </span>
             </li>
-          </ul>
-          <span class="flesh">&#8669;</span> 
-          <span class="math_box">$M_{1,A}[2^e]=\langle hP'‎, ‎hQ'\rangle,\qquad  h=3^n$</span>
-      </div>
-      <!-- Slide  21-->
-      <div id="algorithm" class="step opacity" data-x="21000" data-y="0">
-        <p class="boxdef">
-          الگوریتم
-        </p>
-        <code style="font-size: 15px;">
-          for i in range(20)
-        </code>
-            <!-- $‎\begin{algorithm}‎
-            ‎\caption{‎
-            تولید شبه‌تصادفی بیت
-            }
-            ‎\begin{latin}‎
-            ‎\begin{algorithmic}\label{PRGB}‎
-            ‎\REQUIRE{The seed $s=m\in \mathbb{Z}_{\ell  ^e}^*$ such that $\ell \nmid m$‎, ‎$k\in \mathbb{N}$.}‎
-            ‎\ENSURE{The strings {\textit {$output_0,\ldots,output_k$}}‎ }
-            ‎%\Procedure{Euclid}{$a,b$}\Comment{The g.c.d‎. ‎of a and b}‎
-            ‎\STATE $m_0=m‎, ‎i=0;$‎
-            ‎\STATE $P_0=P‎, ‎Q_0=Q‎, ‎K_0=K‎, ‎M_0=M;$‎
-            ‎\WHILE{$i\leq k$}‎
-            ‎\STATE $P'=P_i+m_iQ_i;$‎
-            ‎\STATE $\phi‎: ‎M_i\rightarrow M'=M_i/\langle P'\rangle;$‎
-            ‎\STATE Suppose $M'‎: ‎by^2=cx^3+ax+c$ where $a=a_1+a_2i‎, ‎c=c_1+c_2i$ and $j=j(M')=j_1+j_2i$‎.
-            ‎\STATE $output_i=f(j);$%\Comment{$f$ is a hard-core predicate.}‎
-            ‎\STATE $i=i+1;$‎
-            ‎\STATE $m_i=a_1+a_2+c_1+c_2+j_1+j_2;$%\Comment{$g$ is a function.}‎
-            ‎\STATE $M_i=M';$‎
-            ‎\STATE Compute $P_i,Q_i$ s.t $M_i[\ell^e]=\langle P_i,Q_i\rangle$‎
-            ‎\ENDWHILE‎
-            ‎\RETURN $output_0,\ldots,output_k;$‎
-            ‎%\EndProcedure‎
-            ‎\end{algorithmic}‎
-            ‎\end{latin}‎
-            ‎\end{algorithm}‎$ -->
+          </ul> 
+          <p class="substep" style="text-align: center;margin-top: 50px;">
+              <span class="math_box" style="font-weight:bolder;color: rgb(121, 2, 2);">$M_{1,A}[2^e]=\langle hP'‎, ‎hQ'\rangle,\qquad  h=3^n$</span>
+          </p>
       </div>
       <!-- Slide  -->
-      <div id="security" class="step" data-x="22000" data-y="0">
+      <div id="security" class="step slide" data-x="22000" data-y="0">
         <p class="boxdef">
           امنیت
+        </p>
+        <p class="fa_box">
+          مسأله محاسبه همسانی بین خم‌های سوپرسینگولار 
+          ‎$CSSI$‎: 
+          فرض کنید
+           ‎$\phi_1:E_1\longrightarrow E_2$
+           ‎ یک همسانی با هسته
+ ‎$\langle [m_1]P_1+[n_1]Q_1\rangle$‎
+  باشد که
+   ‎$m_1,n_1$
+   ‎ اعدادی دلخواه در
+    ‎$\mathbb{Z}_{\ell_1^{e_1}}$‎
+
+       . با فرض مشخص بودن
+        ‎$E_2$‎ و
+         مقادیر
+          ‎$\phi_1(P_2),\phi_1(Q_2)$‎،
+           مولد
+            ‎$\langle \langle [m_2]P_2+[n_2]Q_2\rangle$‎
+             را بیابید.
         </p>
       </div>
       <!-- Slide pairing Section -->
@@ -735,8 +962,8 @@
             زوجیت، میدانهای مناسب زوجیت و حساب روی آن‌ها
           </h2>
       </div>
-        <!-- Slide pairing definition 24-->
-        <div id="pairingDefinition" class="step" data-x="24000" data-y="0">
+      <!-- Slide pairing definition 24-->
+      <div id="pairingDefinition" class="step slide" data-x="24000" data-y="0">
           <p class="boxdef">
             زوجیت
           </p>
@@ -749,53 +976,422 @@
           <span class="fa_box">
             گروه ضربی
           </span>
-          <p class="math_box">
-              \[‎
-              ‎e_r:G_1\times G_2\longrightarrow \mu_r‎
-              ‎\]‎
+          <p class="math_box" style="text-align: center;">
+              $‎e_r:G_1\times G_2\longrightarrow \mu_r‎$
           </p>
-        ‎<ul class="math_box">
-          ‎<li>
-            $\forall P\in G_1, Q\in G_2, n_1,n_2\in \mathbb{Z}\qquad e_r(n_1P,n_2Q)=e_r(P,Q)^{n_1n_2}$   
-          </li>
-          <li>
-            $G_1=\langle P\rangle, G_2=\langle Q \rangle \rightarrow\mu_r=\langle e_r(P,Q) \rangle$
-          </li>
-          <li class="fa_box">
-              برای هر ‎$P\in G_1$‎ و ‎$Q\in G_2$‎، الگوریتمی کارا برای محاسبه‌ی ‎$e_r(P,Q)$‎ وجود دارد.
-          </li>
-        </ul>
+          <div style="margin-top: 50px; text-align: center;">
+              ‎<ul class="math_box">
+                  ‎<li>
+                    $\forall P\in G_1, Q\in G_2, n_1,n_2\in \mathbb{Z}, \qquad e_r(n_1P,n_2Q)=e_r(P,Q)^{n_1n_2}$   
+                  </li>
+                  <li>
+                    $G_1=\langle P\rangle, G_2=\langle Q \rangle \rightarrow\mu_r=\langle e_r(P,Q) \rangle$
+                  </li>
+                  <li>
+                    <p style="text-align: right"> 
+                      <span class="fa_box">
+                        ‎ وجود دارد.
+                      </span>
+                      <span class="math_box">
+                          $e_r(P,Q)$
+                      </span>‎
+                      <span class="fa_box">
+                          الگوریتمی کارا برای محاسبه‌ی
+                      </span> 
+                      <span class="math_box">
+                          $P\in G_1$‎ و ‎$Q\in G_2$
+                      </span>
+                      <span class="fa_box">
+                          برای هر
+                      </span>
+                    </p>
+                  </li>
+                </ul>
+          </div>
+      </div>
+      <!-- Slide pairingtypes 25-->
+      <div id="pairingTypes" class="step slide" data-x="25000" data-y="0">
+        <p class="boxdef">
+        انواع زوجیت  
+        </p>
+        <div class="boxdef formula">
+            <div>
+                <span class="fa_box" style="font-size: 30px;">
+                  زوجیت وایل
+                </span>
+                <p class="math_box">
+                  $Div(f_{r,P})=r[P]-[rP]-(r-1)[\mathcal{O}]$
+                </p>
+            </div>
+            <div>
+                <p class="math_box" style="font-size: 30px;">
+                    $G_1=G_2=E[r]‎$
+                </p>
+                <p class="math_box" style="font-size: 30px;">
+                    $‎e_{W,r}(P,Q)=\frac{f_{r,P}(Q)}{f_{r,Q}(P)}‎, P,Q\neq \mathcal{O}‎$
+                </p>
+            </div>
         </div>
-<!-- Slide pairingtypes 25-->
-        <div id="pairingTypes" class="step" data-x="25000" data-y="0">
-            <p class="boxdef">
-            انواع زوجیت  
-            </p>
+        <div class="boxdef formula">
+            <div>
+                <span class="fa_box" style="font-size: 30px;">
+                  زوجیت تیت 
+                </span>
+            </div>
+            <div>
+                <p class="math_box" style="font-size: 30px;">
+                    $G_1=E(\mathbb{F}_{q^k})[r],\ G_2=E(\mathbb{F}_{q^k})‎$
+                </p>
+                <p class="math_box" style="font-size: 30px;">
+                    $‎e_{T,r}(P,Q)=f_{r,P}(Q)^{\frac{q^k-1}{r}}‎$
+                </p>
+            </div>
         </div>
+        <p class='page_number' style="text-align:center">20</p>
+      </div>
       <!-- Slide  pairingComputation 26-->
-      <div id="pairingComputation" class="step" data-x="26000" data-y="0">
+      <div id="pairingComputation" class="step slide" data-x="26000" data-y="0">
           <p class="boxdef">
             الگوریتم میللر
           </p>
+          <img src="/img/miller.png" style="width:600px; height:400px;" srcset="">
+          <p class='page_number' style="text-align:center">21</p>
       </div>
       <!-- Slide  27-->
-      <div id="PFFF" class="step" data-x="27000" data-y="0">
+      <div id="arithmetic" class="step slide" data-x="27000" data-y="0">
           <p class="boxdef">
-            میدان‌های مناسب زوجیت
+            حساب روی میدان‌های متناهی
           </p>
+          <div>
+            <span style="display: inline-block;" class="math_box">
+              $f=f_0+f_1x,\quad g=g_0+g_1x\in K[x]$
+            </span>
+            <span class="fa_box">
+              ضرب روی میدان‌های متناهی (ضرب چندجمله‌ای‌ها)
+            </span>
+          </div>
+          <div class="formula substep">
+            <span class="math_box formula_l" style="display: inline-block;margin:0 80px 0 0;">
+              $h=fg=f_0g_0+\color{red}{(f_0g_1+f_1g_0)}x+f_1g_1x^2$
+            </span>
+            <span class="fa_box">
+              روش معمولی(4 ضرب)
+            </span>
+          </div>
+          <div class="formula substep">
+              <span class="math_box formula_l" style="display: inline-block;margin:0 80px 0 0;">
+                $(\color{green}{f_0g_1}+\color{green}{f_1g_0})=\color{green}{(f_0+g_0)(f_1+g_1)}-f_0g_0-f_1g_1$
+              </span>
+              <span class="fa_box">
+                روش کاراتسوبا (3 ضرب)
+              </span>
+            </div>
+            <div class="substep">
+              <p class="boxthm">
+                  روش کاراتسوبا
+              </p>
+              <ul>
+                <li>
+                  <span class="math_box">
+                    $f=\sum\limits_{i=0}^d f_ix^i, \quad g=\sum\limits_{i=0}^d g_ix^i \in K[x], \qquad m=d+1,\qquad h=fg=\sum\limits_{i=0}^{2m-2}h_ix^i‎$
+                  </span>
+                </li>
+                <li>
+                  <span class="math_box">
+                      $D_i=f_ig_i,\quad i=0,\ldots‎, ‎m-1, D_{s,t}=(f_s+f_t)(g_s+g_t)‎\quad i=1‎, ‎\ldots‎, ‎2m-3,\qquad s+t=i, s,t\in \mathbb{N}, 0\leq s$
+                  </span>
+                </li>
+              </ul>
+              <div class="substep" style="color: brown;">
+                <span class="math_box" style="display: inline-block;">
+                    $‎\begin{array}{l}‎
+                    ‎h_0=D_0\\‎
+                    ‎h_{2m-2}=D_{m-1}\\‎
+                    ‎\end{array}$
+                </span>
+                <span class="math_box">
+                    $‎h_i=\begin{cases}‎
+                    ‎\sum\limits_{s+t=i‎, ‎t>s\geq 0} D_{s,t}-\sum\limits_{s+t=i‎, ‎t>s\geq 0} (D_s+D_t)& 0< i < 2m-2, i=odd\\‎
+                    ‎\sum\limits_{s+t=i‎, ‎t>s\geq 0} D_{s,t}-\sum\limits_{s+t=i‎, ‎t>s\geq 0} (D_s+D_t)‎+ ‎D_{i/2} & 0< i < 2m-2,i=even
+                    ‎\end{cases}$
+                </span>
+                <span class="math_box" style="color: rgb(20, 33, 228);">
+                  $ADD=\frac{5}{2}m^2-\frac{7}{2}m+1,\quad MULT=\frac{1}{2}m^2+\frac{1}{2}m$‎
+                </span>
+              </div>
+               </div>
+        <p class='page_number' style="text-align:center">22</p>
       </div>
-      <!-- Slide EC Section -->
-      <div class="step opacity slide" data-x="27000" data-y="1000">
+      <!-- Slide 28 -->
+      <div id="toom" class="step slide" data-x="28000" data-y="0">
+        <p class="boxdef">
+          روش توم
+        </p>
+        <p class="math_box">
+              $f=f_0+f_1x+f_2x^2, \quad g=g_0+g_1x+g_2x^2\in K[x], \qquad m=d+1, \qquad h=fg=\sum\limits_{i=0}^{4}h_ix^i‎$        </p>
+        </p>
+        <ul>
+          <li class="substep">
+            <span class="fa_box" style="direction: rtl;">
+                محاسبه‌ی مقادیر ‎$f$‎ و ‎$g$‎ در 5 نقطه 
+            </span>
+            <span class="math_box">
+              $A=\{0,\pm 1, 2,\infty \}$
+            </span>
+            <span class="fa_box">
+              (12 عمل جمع)
+            </span>
+            <p class="math_box">
+              $‎\left[\begin{array}{c}‎
+              ‎F_0\\‎
+              ‎F_1\\‎
+              ‎F_2\\‎
+              ‎F_3\\‎
+              ‎F_4‎
+              ‎\end{array}\right]‎
+              ‎=\left[\begin{array}{c}‎
+              ‎f_0\\‎
+              ‎f_0+f_1+f_2\\‎
+              ‎f_0-f_1+f_2\\‎
+              ‎f_0+2f_1+4 f_2\\‎
+              ‎f_2‎
+              ‎\end{array}\right],\qquad 
+              \left[\begin{array}{c}‎
+              ‎G_0\\‎
+              ‎G_1\\‎
+              ‎G_2\\‎
+              ‎G_3\\‎
+              ‎G_4‎
+              ‎\end{array}\right]‎
+              ‎=\left[\begin{array}{c}‎
+              ‎g_0\\‎
+              ‎g_0+g_1+g_2\\‎
+              ‎g_0-g_1+g_2\\‎
+              ‎g_0+2g_1+4 g_2\\‎
+              ‎g_2‎
+              ‎\end{array}\right]‎.‎$
+            </p>
+          </li>
+          <li class="substep">
+            <span class="fa_box">
+                محاسبه‌ی مقادیر ‎$h$؛
+            </span>
+            <span class="math_box">
+              $h(i)=f(i)g(i),\quad i\in A$
+            </span>
+            <span class="fa_box">
+              (5 عمل ضرب)
+            </span>
+          </li>
+          <li class="substep">
+            <span class="fa_box">
+              درونیابی $h$؛
+            ضرب یک ماتریس $5\times 5$
+            (11 عمل جمع)
+            </span>
+          </li>
+        </ul>
+        <p class="fa_box substep" style="text-align: center; font-size: 50px; margin-top: 30px; font-weight:bolder;color:rgb(7, 93, 7)">
+          23 جمع+ 5 ضرب
+        </p>
+        
+      </div>
+      <!-- Slide 29 -->
+      <div id="normInverse" class="step slide" data-x="29000" data-y="0">
+        <p class="boxdef">
+          محاسبه نرم و وارون
+        </p>   
+        <ul>
+          <li>
+            <span class="math_box">
+                $q=p_1^{l_1}p_2^{l_2}\ldots p_r^{l_r}$
+            </span>
+          </li>
+            <li>
+              <span class="fa_box">
+                نگاشت فروبنیوس
+              </span>
+              <span class="math_box">
+                $\begin{array}{rl}‎
+                ‎\sigma_{\mathbb{F}_q‎/ ‎\mathbb{F}_{q'}}‎: ‎&\mathbb{F}_q\longrightarrow \mathbb{F}_q\\‎
+                  ‎&v\mapsto v^{q'}‎
+                ‎\end{array}‎$
+              </span>
+            </li>
+        </ul>
+        <p class="math_box">
+            $w=\prod\limits_{i=1}^{k-1}\sigma^{i}(v)\in \mathbb{F}_{q}$
+        </p>
+        <p class="math_box">
+          $‎N_{‎\mathbb{F}_{p^n}/‎\mathbb{F}_{p}}(v)=\prod\limits_{i=0}^{n-1}\sigma^{i}(v)‎$
+        </p>
+        <p class="math_box" style="text-align: center;font-size:30px;margin-top: 30PX;">
+          $\color{brown}{N_{\mathbb{F}_{q}/ ‎\mathbb{F}_{q'}}(v)=\left( N_{\mathbb{F}_{q}/ ‎\mathbb{F}_{q/p_1}}\left( \cdots N_{\mathbb{F}_{{p_r}^2}/ ‎\mathbb{F}_{p_1}}(v)\right)\right)}$  
+        </p>
+        <p class="math_box" style="text-align: center;font-size:30px;">
+            $\color{brown}{‎v^{-1}=w\cdot {N_{\mathbb{F}_{q} /‎\mathbb{F}_{q'}}(v)}^{-1}‎}$
+        </p>
+
+      </div>
+      <!-- Slide 30 -->
+      <div id="PFFF1" class="step slide" data-x="30000" data-y="0" style="width: 700px;height:800px;">
+        <!-- <p class="boxdef">
+          میدان متناهی مناسب زوجیت
+        </p>
+        <div style="text-align: right;margin-bottom: 20px;">
+          <span class="fa_box">
+            میدان متناهی 
+          </span>
+          <span class="math_box">
+            $\mathbb{F}_q$
+          </span>
+          <span class="fa_box">
+              یک میدان مناسب برای زوجیت است هرگاه 
+          </span>
+            <p style="text-align: center;">
+              $q=p^{2^t 3^s}$
+            </p> 
+        </div>-->
+        <p class="boxthm">
+          ساختار میدان پیشنهادی ما
+        </p>
+        <p class="math_box" style="font-size: 30px;margin-top:30px;">
+          $c\in \mathbb{F}_p\qquad s.t\qquad \sqrt{c}, \sqrt[3]{c}\notin \mathbb{F}_p$
+        </p>
+        <img src="./img/tower2.png" style="weight:200px; height:600px;">
+      </div>
+      <!-- Slide 31 -->
+      <div id="PFFF2" class="step slide" data-x="31000" data-y="0">
+        <div>
+            <p class="boxthm" style="font-size: 26px">
+                ساختار میدان‌های متناهی مناسب برای زوجیت
+                (قضیه)
+              </p>
+              <ul style="text-align: left;">
+                <li>
+                  <span class="math_box">
+                    $
+                    \large{
+                      c\in \mathbb{F}_p\ s.t\ \forall\ l_i|n\ \sqrt[l_i]{c}\notin \mathbb{F}_p
+                    }$
+                  </span>
+                </li>
+                <li>
+                  <span class="math_box">
+                    $‎
+                      \large {
+                        \begin{array}{l}‎
+                    ‎g_{1,r}=x_1^{l_r}-c‎, ‎g_{2,r}=x_2^{l_r}-x_1‎, ‎\ldots‎, ‎g_{e_r,r}=x_{e_r}^{l_r}-x_{e_r-1}\\‎
+                    ‎\\‎‎
+                    ‎\vdots\\‎
+                    ‎g_{r,1}=x_{t_1}^{l_1}-x_{t_1-1}‎, ‎g_{r,2}=x_{t_1+1}^{l_1}-x_{t_1}‎, ‎\ldots‎, ‎g_{r‎, ‎e_1}=x_{t_1+e_1}^{l_1}-x_{t_1+e_1-1}\in \mathbb{F}_p[x_1,\ldots, x_t]\\‎
+                    ‎\end{array}
+                      }                   
+                    ‎$
+                  </span>
+                </li>
+                <li>
+                  <span class="math_box">
+                      $I=\langle g_{1,r},\ldots,g_{r,e_1}\rangle\subset \mathbb{F}_p[x_1,\ldots, x_t]$
+                  </span>
+                </li>
+              </ul>
+              <p class="fa_box" style="color:blue;text-align:center;">
+                حلقه
+                $\mathbb{F}_p[x_1,\ldots, x_t]/I$
+                یک میدان است. 
+              </p>
+        </div>
+        <div class="substep">
+          <p class="boxthm">
+            تعداد عملیات ضرب و جمع در 
+            $\mathbb{F}_p$
+            برای محاسبه ضرب دو عنصر 
+            $\mathbb{F}_q$
+            (قضیه)
+          </p>
+          <p class="math_box" style="text-align: center;font-size:30px;color:blue;">
+            $(\prod\limits_{i=1}^r m_i^{e_i}) m_p‎+ ‎A(n) a_p‎$
+          </p>
+          <span class="fa_box">
+            که در آن
+          </span>
+          <span class="math_box">
+            $A(n)=\sum\limits_{i=1}^{r} m_1^{e_1}\cdots m_{i-1}^{e_{i-1}}a_i n_{i-1}\left(\frac{(m_i/l_i)^{e_i}-1}{m_i/l_i-1}\right)$
+          </span>
+          <span class="fa_box">
+            و
+          </span>
+          <span class="math_box">
+            $m_i$
+          </span>
+          <span class="fa_box">
+              تعداد ضربهای مورد نیاز در 
+              ‎$\mathbb{F}_p$‎ 
+              برای ضرب دو عنصر  
+              ‎$\mathbb{F}_{p^{l_i}}$
+              از درجه 
+              ‎$l_i-1$‎
+          </span>
+        </div>
+      </div>
+      <!-- Slide 32 -->
+      <div id="multTable" class="step slide" data-x="32000" data-y="0">
+        <div style="margin-bottom: 20px;">
+            <p class="boxthm" >
+                تعداد عملیات جمع و ضرب موردنیاز در 
+                  $\mathbb{F}_p$
+                  برای محاسبه نرم یک عنصر  در
+                  $\mathbb{F}_q$
+                  (قضیه)
+              </p>
+              <p class="math_box" style="text-align: center;font-size:20px;color:blue;margin-top: 15px;">
+                 ‎$\sum\limits_{i=1}^{r}\sum\limits_{j=0}^{r} (l_i-1) \left[ (n_{i,j}-1)+\frac{\prod\limits_{k=i}^r m_k^{e_k}}{m_i^j} \right]‎ m_p$
+                   ‎$+\left(\sum\limits_{i=1}^{r} (l_i-1) A'_{i}\right) a_p $‎
+              </p>
+              <span class="fa_box">
+                که در آن 
+              </span>
+              <span class="math_box">
+                  ‎ ‎$A'_{i}=\sum\limits_{j=0}^{e_i} A_{i,j} ,A_{i,j}=
+                  ‎\sum\limits_{k=1}^{e_i} \sum\limits_{t=j}^{r} (l_j-1) m_i^{e_i}\cdots m_{j-1}^{e_{j-1}}a_j n_{j-1}‎ 
+                  ‎\left(‎ 
+                  ‎\frac{(m_j/l_j)^{e_j}-1}{m_j/l_j-1}‎
+                  ‎\right)‎$
+              </span>
+        </div>
+        <div class="substep">
+          <p class="example_box" style="background-color: blueviolet">
+              تعداد عملیات ضرب لازم روی ‎$\mathbb{F}_p$‎برای ضرب دو عنصر ‎$\mathbb{F}_q$‎ با روش‌های کاراتسوبای معمولی‏‏، برج و توم
+          </p>
+          <div>
+            <img src="./img/mult.png" style="width: 700px;height:200px;margin-top:20px;">
+          </div>
+        </div>
+      </div>
+      <!-- Slide 33 -->
+      <div id="normTable" class="step slide" data-x="33000" data-y="0">
+        <p class="example_box" style="background-color: blueviolet">
+            تعداد عملیات ضرب لازم روی
+             ‎$\mathbb{F}_p$
+             ‎برای محاسبه نرم یک عنصر در 
+            $\mathbb{F}_q$
+        <div>
+          <img src="./img/norm.png" style="width: 700px;height:200px;margin-top:20px;">
+        </div>
+      </div>
+      <!-- Slide ID Based Section -->
+      <div id="ID_Section" class="step opacity slide" data-x="27000" data-y="1000">
           <h2 class="section_box em15">
               شناسایی کاربر مبتنی بر شناسه‌ی کاربری بدون گواهینامه
           </h2>   
       </div>
       <!-- Slide 27-1 -->
-      <div class="step slide opacity" data-x="27000" data-y="1000">
+      <div id="ID_History" class="step slide opacity" data-x="28000" data-y="1000">
           <h6 class="title animated pulse">
             تاریخچه:
           </h6>
-          <ul style="line-height: 60px;">
+          <ul style="line-height: 60px; margin-top: 50px;">
             <li class="substep">
                شناسایی کاربر: (فیات و شمیر، 1986)
             </li>
@@ -811,176 +1407,672 @@
           </ul> 
         </div>
       <!-- Slide   Shamir 27-2-->
-      <div class="step slide" data-x="27000" data-y="2000" >
+      <div id="ShamirID" class="step slide" data-x="27000" data-y="2000" >
           <p class="boxdef">
             طرح رمزنگاری مبتنی بر شناسه‌ی کاربری شمیر
           </p>
           <br>
+          <div style="text-align: center; line-height: 90px;">
+              <ul>
+                  <li class="arrange" style="color:rgb(13, 104, 4);">
+                    <span class="fa_box field_1">
+                      پارامترامنیتی
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                    <span class='field_3 boxalg'> تنظیمات (KGC) </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                    <span class='fa_box field_5'>
+                        پارامترهای سامانه و کلید خصوصی
+                    </span>           
+                  </li>
+                  
+                  <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                    <span class="fa_box field_1">
+                      کلید خصوصی اصلی
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                    <span class="field_3 boxalg"> استخراج (KGC) </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                    <span class="fa_box field_5">
+                      کلید خصوصی متناظر هستار 
+                      ‎A‎
+                      با شناسه‌ی  
+                    </span>
+                      <span class="math_box">
+                          ‎$\textsf{ID}\in\{0,1\}^*$‎
+                      </span>
+                  </li>
+      
+                  <li class="arrange substep" style="color: rgb(13, 104, 4);">
+                    <span class="fa_box field_1">
+                      شناسه کاربری
+                      $\textsf{ID}$‎
+                      و 
+                      متن اصلی
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                    <span class=" boxalg field_3"> رمزگذاری (A) </span>
+                    </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                    <span class="fa_box field_5">
+                      پیام رمزشده
+                    </span>
+                  <li class="arrange substep" style="color: rgb(13, 104, 4);">
+                    <span class="fa_box field_1">
+                        پیام رمزشده و کلید خصوصی  
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                    <span class="field_3 boxalg"> رمزگشایی (B) </span>
+                    </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                    <span class="fa_box field_5">
+                      پیام اصلی
+                    </span>
+                  </li>
+                </ul>
+          </div>
+      </div>
+      <!-- Slide  Boneh-Franklin 29-->
+      <div id="Boneh" class="step slide" data-x="27000" data-y="3000" style="width: 900px;">
+        <p class="boxdef">
+          طرح رمزگذاری مبتنی بر شناسه‌ی کاربری بونه-فرانکلین
+          (‎BasicIdent)
+        </p>
+        <div style="text-align: center; line-height: 90px;">
+            <ul>
+                <li class="arrange" style="color:rgb(13, 104, 4);">
+                  <span class="fa_box field_1">
+                    پارامترامنیتی
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class='field_3 boxalg'>  تنظیمات (KGC) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class='math_box field_5'>
+                    $\begin{array}{l}
+                    \begin{array}{l}
+                    param= \{ p, P, G_1, G_2,\\
+                    e:G_1\times G_1\longrightarrow G_1, H_1, H_2\}\\
+                    \end{array}\\
+                    P_{pub}=\textsf{msk} P
+                    \end{array}$
+                    (کلید خصوصی= $\textsf{msk}$)
+                 </span>            
+                </li>
+                
+                <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="math_box field_1">
+                    $\textsf{msk}, \textsf{ID}$
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> استخراج (KGC) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="fa_box field_5">
+                    $\begin{array}{l}
+                    d_{\textsf{ID}}=\textsf{msk}Q_{\textsf{ID}}\in G_1^*\\
+                    (Q_{\textsf{ID}}=H_1(\textsf{ID}))
+                    \end{array}$
+                  </span>
+                </li>
+    
+                <li class="arrange substep" style="color: rgb(13, 104, 4);">
+                  <span class="math_box field_1">
+                    $\textsf{ID}, message$‎
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                  <span class=" boxalg field_3">
+                      رمزگذاری (A) : ($r\in \mathbb{Z}$)
+                  </span>
+                  </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                  <span class="math_box field_5">
+                      $\begin{array}{l}
+                      C=(rP,m\oplus H_2(g_{\textsf{ID}}^r))\\
+                      (g_{\textsf{ID}}=e(Q_{\textsf{ID}},P_{pub})\in G_2^*)
+                      \end{array}$
+                  </span>
+                <li class="arrange substep" style="color: rgb(13, 104, 4);">
+                  <span class="math_box field_1">
+                    $C=(U,V) , \textsf{msk}$
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                  <span class="field_3 boxalg"> رمزگشایی (B) </span>
+                  </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                  <span class="math_box field_5">
+                    $message=V\oplus H_2(e(d_{\textsf{ID}},U))$
+                  </span>
+                </li>
+              </ul>
+        </div>
+      </div>
+      <!-- Slide Certificateless -->
+      <div id="paterson" class="step slide" data-x="27000" data-y="4000" style="width: 900px; height: 700px;">
+          <p class="boxdef">
+            طرح رمزنگاری مبتنی بر شناسه‌ی کاربری بدون گواهینامه
+          </p>
+          <div style="text-align: center; line-height: 90px;">
+              <ul>
+                  <li class="arrange" style="color:rgb(13, 104, 4);">
+                    <span class="fa_box field_1">
+                      پارامترامنیتی
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                    <span class='field_3 boxalg'> تنظیمات (KGC) </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                    <span class='fa_box field_5'>
+                        پارامترهای سامانه و کلید خصوصی
+                    </span>           
+                  </li>
 
-          <ul style="border: 2px solid blue">
-            <li class="arrange" style="color:rgb(13, 104, 4);">
-              <span class="fa_box field_1">
-                پارامترامنیتی
-              </span>
-              <span class='fas fa-arrow-right field_2' style='font-size:36px;color:red'></span>
-              <span class='field_3 boxalg'> تنظیمات </span>
-              <span class='fas fa-arrow-right field_4' style='font-size:36px;color:red'></span>
-              <span class='fa_box field_5'>
-                پارامترهای سامانه و کلید خصوصی
-              </span>            
-            </li>
-            
-            <li class="arrange" style="color: rgb(13, 104, 4)">
-              <span class="fa_box field_1">
-                کلید خصوصی
-              </span>
-              <span class='fas fa-arrow-right field_2' style='font-size:36px;color:red'></span>
-              <span class="field_3 boxalg"> استخراج </span>
-              <span class='fas fa-arrow-right field_4' style='font-size:36px;color:red'></span>
-              <span class="fa_box field_5">
-                کلید خصوصی متناظر هستار 
-                ‎A‎
-                با شناسه‌ی  
-              </span>
-                <span class="math_box">
-                    ‎$\textsf{ID}\in\{0,1\}^*$‎
-                </span>
-            </li>
+                  <li class="arrange" style="color:rgb(13, 104, 4);">
+                      <span class="math_box field_1">
+                        $\textsf{ID}$
+                      </span>
+                      <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                      <span class='field_3 boxalg'> استخراج کلید خصوصی ناقص (KGC) </span>
+                      <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                      <span class='fa_box field_5'>
+                          کلید خصوصی ناقص A
+                      </span>           
+                  </li>
+                    
+                  <li class="arrange" style="color: rgb(13, 104, 4);">
+                      <span class="fa_box field_1">
+                        پارامترها و کلید خصوصی ناقص A
+                      </span>
+                      <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                      <span class=" boxalg field_3"> تعیین کلید خصوصی (A) </span>
+                      </span>
+                      <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                      <span class="fa_box field_5">
+                        کلید خصوصی A
+                      </span>
+                  </li>
+                  
+                  <li class="arrange" style="color: rgb(13, 104, 4);">
+                      <span class="fa_box field_1">
+                        پارامترهای سامانه
+                      </span>
+                      <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                      <span class=" boxalg field_3"> تعیین کلید عمومی (A) </span>
+                      </span>
+                      <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                      <span class="fa_box field_5">
+                        کلید عمومی
+                      </span>
+                    </li>
+    
+                  <li class="arrange" style="color: rgb(13, 104, 4);">
+                    <span class="fa_box field_1">
+                      شناسه کاربری
+                      $\textsf{ID}$‎
+                      و 
+                      متن اصلی
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                    <span class=" boxalg field_3"> رمزگذاری (A) </span>
+                    </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                    <span class="fa_box field_5">
+                      پیام رمزشده
+                    </span>
+                  </li>
+                  <li class="arrange" style="color: rgb(13, 104, 4);">
+                    <span class="fa_box field_1">
+                        پیام رمزشده، پارامترها و کلید خصوصی  
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:48px;color:red'></span>
+                    <span class="field_3 boxalg"> رمزگشایی (B) </span>
+                    </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:48px;color:red'></span>
+                    <span class="fa_box field_5">
+                      پیام اصلی
+                    </span>
+                  </li>
+                </ul>      
+          </div>
+      </div>
+      <!-- Slide Identification 30-->
+      <div id="Identification" class="step opacity slide" data-x="27000" data-y="5000">
+          <p class="boxdef">
+            طرح شناسایی
+          </p>
+          <br>
+          <div style="text-align: center; line-height: 90px;">
+            <ul>
+                <li class="arrange" style="color:rgb(13, 104, 4);">
+                  <span class="fa_box field_1">
+                    پارامترامنیتی
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class='field_3 boxalg'> تولید کلید </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class='fa_box field_5'>
+                      زوج کلید خصوصی و عمومی 
+                  </span>           
+                </li>
+                
+                <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="fa_box field_1">
+                    کلید خصوصی و عمومی
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> اثبات کننده </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="fa_box field_5">
+                    شرکت در تراکنش چالش و پاسخ 
+                  </span>
+                </li>
 
-            <li class="arrange" style="color: rgb(13, 104, 4);">
-              <span class="fa_box field_1">
-                $\textsf{ID}$‎
+                <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                    <span class="fa_box field_1">
+                      کلید عمومی
+                    </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                    <span class="field_3 boxalg"> وارسی کننده </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                    <span class="fa_box field_5">
+                      شرکت در تراکنش چالش و پاسخ 
+                    </span>
+                </li>
+            </ul>
+          </div>
+      </div>
+      <!-- Slide   31-->
+      <div id="Challenge_Response" class="step opacity slide" data-x="27000" data-y="6000">
+          <p class="boxdef">
+            تراکنش چالش و پاسخ
+          </p>
+          <ul>
+            <li>
+              <span class="fa_box">
+                  اثبات کننده مقدار تعهد
+                  را به وارسی کننده می‌فرستد. 
               </span>
-              <span class='fas fa-arrow-right field_2' style='font-size:48px;color:red'></span>
-              <span class=" boxalg field_3"> رمزگذاری </span>
+            </li>
+            <li>
+              <span class="fa_box">
+                  وارسی کننده مقدار چالش
+                  را برای اثبات کننده می‌فرستد. 
               </span>
-              <span class='fas fa-arrow-right field_4' style='font-size:48px;color:red'></span>
-              <span class="fa_box field_5">
-                پیام رمزشده
-              </span>
-            <li class="arrange" style="color: rgb(13, 104, 4);">
-              <span class="fa_box field_1">
-                  پیام رمزشده و کلید خصوصی  
-              </span>
-              <span class='fas fa-arrow-right field_2' style='font-size:48px;color:red'></span>
-              <span class="field_3 boxalg"> استخراج </span>
-              </span>
-              <span class='fas fa-arrow-right field_4' style='font-size:48px;color:red'></span>
-              <span class="fa_box field_5">
-                پیام اصلی
+            </li>
+            <li>
+              <span class="fa_box">
+                  اثبات کننده مقدار پاسخ 
+                  را به وارسی کننده می‌فرستد و وارسی کننده مقدار بولی نهایی ‎$b$‎ را خروجی می‌دهد.  
               </span>
             </li>
           </ul>
-
-      </div>
-      <!-- Slide  Boneh-Franklin 29-->
-      <div class="step" data-x="27000" data-y="3000">
-        <p class="boxdef">
-          طرح رمزنگاری مبتنی بر شناسه‌ی کاربری بونه-فرانکلین
-          (‎BasicIdent)
-        </p>
-        <ul>
-          <li class="formula" style="color:rgb(13, 104, 4)">
-            <span class="fa_box formula_l">
-              پارامترامنیتی
-            </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-            <span class="formula_c boxdef"> تنظیمات </span>
-          </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-            <span class="fa_box">
-              پارامترهای سامانه و کلید خصوصی
-            </span>            
-          </li>
-          <li class="fa_box" style="color: rgb(13, 104, 4)">
-            <span class="fa_box formula_l">
-              کلید خصوصی
-            </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-            <span class="formula_c boxdef"> استخراج </span>
-            </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-            <span class="fa_box">
-              کلید خصوصی متناظر هستار 
-              ‎A‎
-              با شناسه‌ی  
-              <span class="math_box">
-                  ‎$\textsf{ID}\in\{0,1\}^*$‎
-              </span>
-          </li>
-          <li class="fa_box" style="color: rgb(13, 104, 4);">
-            <li class="fa_box" style="color: rgb(13, 104, 4)">
-              <span class="fa_box formula_l">
-                $\textsf{ID}$‎
-              </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-              <span class="formula_c boxdef"> رمزگذاری </span>
-              </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-              <span class="fa_box">
-                پیام رمزشده
-              </span>
-          </li>
-          <li class="fa_box" style="color: rgb(13, 104, 4);">
-            <span class="fa_box formula_l">
-                پیام رمزشده و کلید خصوصی  
-            </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-            <span class="formula_c boxdef"> استخراج </span>
-            </span><i class='fas fa-arrow-right' style='font-size:48px;color:red'></i>
-            <span class="fa_box">
-              پیام اصلی
-            </span>
-          </li>
-        </ul>
-      </div>
-      <!-- Slide   30-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
-          </p>
-      </div> -->
-      <!-- Slide   31-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
-          </p>
+          <ul class="formula" style="text-align: center;">
+              <li style="display: inline-block;width: 400px;" class="substep">
+                <span class="formula_l math_box">
+                  $b=0$
+                </span>
+                <span class="formula_r">
+                    <i class="material-icons" style="font-size:48px;color:red;margin-top: 20px;"> clear </i>
+                </span>
+              </li>
+              <li style="display: inline-block;width: 400px" class="substep">
+                  <span class="formula_l math_box">
+                      $b=1$
+                    </span>
+                    <span class="formula_r">
+                        <i class="material-icons" style="font-size:48px;color:green;">done</i>
+                    </span>
+              </li>
+          </ul>
       </div> -->
       <!-- Slide   32-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
+      <div id="IdentityBasedIdentification" class="step opacity slide" data-x="27000" data-y="7000">
           <p class="boxdef">
-
+              طرح شناسایی مبتنی بر شناسه کاربری
           </p>
-      </div> -->
+          <!-- <br> -->
+          <div style="text-align: center; line-height: 90px;">
+            <ul>
+                <li class="arrange" style="color:rgb(13, 104, 4);">
+                  <span class="fa_box field_1">
+                    پارامترامنیتی
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class='field_3 boxalg'> تنظیمات (KGC) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class='fa_box field_5'>
+                      پارامترهای عمومی، کلید خصوصی اصلی 
+                  </span>           
+                </li>
+                
+                <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="fa_box field_1">
+                    کلید خصوصی اصلی، پارامترها و 
+                  </span>
+                  <span class="math_box">
+                    $\textsf{ID}$
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> استخراج (KGC) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="fa_box field_5">
+                    کلید خصوصی متناظر با  
+                  </span>
+                  <span class="math_box">
+                      $\textsf{ID}$
+                  </span>
+                </li>
+
+                <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                    <span class="fa_box field_1">
+                      پارامترها، کلید خصوصی و
+                    </span>
+                    <span class="math_box">
+                        $\textsf{ID}$
+                      </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                    <span class="field_3 boxalg"> اثبات کننده </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                    <span class="fa_box field_5">
+                      شرکت در تراکنش چالش و پاسخ 
+                    </span>
+                </li>
+                <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                    <span class="fa_box field_1">
+                      پارامترها و
+                    </span>
+                    <span class="math_box">
+                        $\textsf{ID}$
+                      </span>
+                    <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                    <span class="field_3 boxalg"> وارسی کننده </span>
+                    <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                    <span class="fa_box field_5">
+                      شرکت در تراکنش چالش و پاسخ 
+                    </span>
+                </li>
+            </ul>
+          </div>
+      </div>
       <!-- Slide  33-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
-          </p>
-      </div> -->
+      <div id="CIBI" class="step opacity slide" data-x="27000" data-y="8000" style="width: 1000px; height: 700px;">
+        <p class="boxdef">
+          طرح شناسایی مبتنی بر شناسه کاربری بدون گواهینامه
+        </p>
+        <div style="text-align: center; line-height: 90px;">
+          <ul>
+              <li class="arrange" style="color:rgb(13, 104, 4);">
+                <span class="fa_box field_1">
+                  پارامترامنیتی
+                </span>
+                <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                <span class='field_3 boxalg'> تنظیمات (KGC) </span>
+                <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                <span class='fa_box field_5'>
+                    پارامترهای عمومی، کلید عمومی اصلی، خصوصی اصلی 
+                </span>           
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                <span class="fa_box field_1">
+                  کلید عمومی و خصوصی اصلی، پارامترها و 
+                </span>
+                <span class="math_box">
+                  $\textsf{ID}$
+                </span>
+                <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                <span class="field_3 boxalg">  استخراج کلید خصوصی ناقص (KGC) </span>
+                <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                <span class="fa_box field_5">
+                  کلید خصوصی ناقص متناظر با  
+                </span>
+                <span class="math_box">
+                    $\textsf{ID}$
+                </span>
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="fa_box field_1">
+                    پارامتر امنیتی و 
+                  </span>
+                  <span class="math_box">
+                      $\textsf{ID}$
+                    </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> تنظیم کلید کاربر (A) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="fa_box field_5">
+                    کلید خصوصی و کلید عمومی نظیرش
+                  </span>
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="fa_box field_1">
+                    کلید خصوصی ناقص، کلید عمومی کاربر، کلید خصوصی کاربر
+                  </span>
+                  <span class="math_box">
+                      $\textsf{ID}$
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> تنظیم کلید خصوصی (A) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="fa_box field_5">
+                    کلید خصوصی کامل 
+                  </span>
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="fa_box field_1">
+                    کلید عمومی اصلی، کلید عمومی کاربر، کلید خصوصی کاربر
+                  </span>
+                  <span class="math_box">
+                      $\textsf{ID}$
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> پروتکل شناسایی چالش و پاسخ </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="math_box field_5">
+                     مقدار $b$
+                  </span>
+              </li>
+          </ul>
+        </div>
+      </div>
       <!-- Slide  34-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
-          </p>
-      </div> -->
+      <div id="ICII" class="step slide opacity" data-x="27000" data-y="9000" style="width: 1000px; height: 700px;">
+        <p class="boxdef">
+          طرح شناسایی مبتنی بر شناسه کاربری بدون گواهینامه
+        </p>
+        <div style="text-align: center; line-height: 90px;">
+          <ul>
+              <li class="arrange" style="color:rgb(13, 104, 4);">
+                <span class="fa_box field_1">
+                  پارامترامنیتی
+                </span>
+                <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                <span class='field_3 boxalg'> تنظیمات (KGC) </span>
+                <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                <span class='math_box field_5'>
+                  $\begin{array}{l}
+                  \mathbb{F}_q, E_1, P, E_2(=E_1/\langle G\rangle), P_{KGC}(=\hat{\phi}(P)), H\\
+                  (msk=G)
+                  \end{array}$
+                </span>           
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                <span class="fa_box field_1">
+               پارامترها و 
+                </span>
+                <span class="math_box">
+                  $msk$
+                </span>
+                <span class="math_box">
+                  $\textsf{ID}$
+                </span>
+                <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                <span class="field_3 boxalg">  استخراج کلید خصوصی ناقص (KGC) </span>
+                <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                <span class="math_box field_5">
+                  $S_{\textsf{ID}}=\phi(Q)(Q=H(\textsf{ID})\in E_1[n])$  
+                </span>
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="fa_box field_1">
+                    پارامتر امنیتی و 
+                  </span>
+                  <span class="math_box">
+                      $\textsf{ID}$
+                    </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> تنظیم کلید کاربر (A) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="fa_box field_5" style="direction: rtl">
+                  نقاط تصادفی 
+                  </span>
+                  <span class="math_box">
+                    $P'\in E_2[n], b\in \mathbb{Z}$
+                  </span>
+              </li>
+              <li class="arrange substep" style="color: rgb(13, 104, 4)">
+                  <span class="math_box field_1">
+                    پارامتر امنیتی 
+                  </span>
+                  <span class="math_box">
+                      $\textsf{ID}$
+                  </span>
+                  <span class='fas fa-arrow-left field_2' style='font-size:36px;color:red'></span>
+                  <span class="field_3 boxalg"> تنظیم کلید خصوصی (A) </span>
+                  <span class='fas fa-arrow-left field_4' style='font-size:36px;color:red'></span>
+                  <span class="math_box field_5">
+                    $upk=\psi(bP)(\psi:E_2\longrightarrow E_3=E_2/\langle bS_{\textsf{ID}}+P'\rangle), e_3$
+                  </span>
+              </li>
+          </ul>
+        </div>
+      </div>
       <!-- Slide  35-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
+       <div id="challengisogeny" class="step opacity slide" data-x="27000" data-y="10000">
           <p class="boxdef">
-
-          </p>
-      </div> -->
+              تراکنش چالش و پاسخ
+            </p>
+            <ul>
+              <li>
+                <span class="fa_box">
+                    اثبات کننده نقطه تصادفی 
+                    ‎$R\in E_3$‎
+                    انتخاب، مقدار 
+                    $S=R+\psi(S_{\textsf{ID}})$
+                    را محاسبه و 
+                    $(S,E_3,n)$
+                    را برای وارسی کننده می‌فرستد.
+                </span>
+              </li>
+              <li>
+                <span class="fa_box">
+                    وارسی‌کننده
+                  نامساوی
+                  ‎$e_3(upk,S)\neq 1$‎
+                  را بررسی، 
+                  عنصر تصادفی 
+  ‎               $d\in \mathbb{Z}_n$‎
+                را انتخاب می‌کند و به عنوان چالش برای اثبات‌کننده می‌فرستد.
+                </span>
+              </li>
+              <li>
+                <span class="fa_box">
+                    اثبات‌کننده 
+                  پاسخ 
+                  ‎$Y=b\hat{\psi}(S)+S_{\textsf{ID}}+d\textsf{usk}$‎
+                  و مقدار 
+                  ‎$W=e_2(P,\textsf{usk})$‎
+                  را محاسبه می‌کند و 
+                  ‎$(Y,W)$‎
+                  را برای وارسی‌کننده می‌فرستد.
+                </span>
+              </li>
+              <li>
+                <span class="math_box">
+                    وارسی‌کننده تساوی 
+                    $‎e_2(P,Y)=e_3(\textsf{upk},S)e_1(P_{KGC},Q_{\textsf{ID}})W^d‎$
+                    را تحقیق می‌کند.
+                </span>
+              </li>
+            </ul>
+            <ul class="formula" style="text-align: center;">
+                <li style="display: inline-block;width: 400px;" class="substep">
+                  <span class="formula_l math_box">
+                    $b=0$
+                  </span>
+                  <span class="formula_r">
+                      <i class="material-icons" style="font-size:48px;color:red;margin-top: 20px;"> clear </i>
+                  </span>
+                </li>
+                <li style="display: inline-block;width: 400px" class="substep">
+                    <span class="formula_l math_box">
+                        $b=1$
+                      </span>
+                      <span class="formula_r">
+                          <i class="material-icons" style="font-size:48px;color:green;">done</i>
+                      </span>
+                </li>
+            </ul>
+      </div>
       <!-- Slide  36-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
+      <div id="ICIISecurity" class="step opacity slide" data-x="27000" data-y="11000">
+          <p class="boxdef" style="margin-bottom: 50px;">
+            امنیت
           </p>
-      </div> -->
+          <ul style="color:green;">
+            <li>
+              نوع I
+              (کاربر مخرب)
+            </li>
+            <li>
+              نوع II
+              (KGC
+              مخرب)
+            </li>
+          </ul>
+          <br>
+          <br>
+          <ul style="color: brown;">
+            <li>
+              حمله غیرفعال
+            </li>
+            <li>
+              حمله فعال 
+            </li>
+            <li>
+              حمله هم‌روند
+            </li>
+          </ul>
+        </div>
       <!-- Slide  37-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
-          </p>
-      </div> -->
+      <div id="papers" class="step opacity slide" data-x="27000" data-y="12000">
+        <h5 class="boxdef">
+          مقالات مستخرج از این رساله:
+        </h5>
+        <ul style="direction: ltr">
+          <li>
+              "‎Isogeny-Based Certificateless Identification Scheme.‎" ‎Algebraic Structures and Their Applications. With H. Daghigh
+          </li>
+          <li>
+              "‎Diffie-Hellman type key exchange protocols based on isogenies.‎" ‎Bulletin of the Iranian Mathematical Society.
+          </li>
+        </ul>
+        <div style="margin-top: 50px;">
+            <p class="example_box">
+                مقالات در حال انجام 
+              </p>
+              <ul style="direction: ltr">
+                  <li>
+                    "The Arithmetic of Pairing Friendly Finite Field", With Eric Schost.  
+                  </li>
+                  <li>
+                    "Isogeny Based Cryptographically Pseudorandom Bit Generator", With David Jao
+                  </li>
+                </ul>
+        </div>
+      </div>
       <!-- Slide  38-->
-      <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
-          <p class="boxdef">
-
-          </p>
-      </div> -->
+      <div id="last" class="step opacity slide" data-x="27000" data-y="13000" data-z="50" data-rotate="50">
+        <h1>
+          با تشکر از توجه و حضور شما
+        </h1>
+      </div>
       <!-- Slide  39-->
       <!-- <div id="pairingComputation" class="step opacity" data-x="26000" data-y="0">
           <p class="boxdef">
@@ -1083,6 +2175,7 @@
     <script src="lib/angular.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="./js/awosome.js"></script>
+    <script src="./js/prism.js"></script>
     <!-- <script src="./js/code/Lexer.js"></script>
     <script src="./js/code/ParseError.js"></script>
     <script src="./js/code/Parser.js"></script>

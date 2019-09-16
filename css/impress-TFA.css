@@ -153,7 +153,7 @@ button:active{
   background: rgb(189, 189, 189); 
 }
 /*  Animation hinge */
-@keyframes hhinge {
+/* @keyframes hhinge {
   0% {
     transform-origin: center right;
     animation-timing-function: ease-in-out;
@@ -182,7 +182,7 @@ button:active{
 #ready.present .animation-hinge{
   animation: hinge 2s ease-in-out 5s 1 both;
   display: inline-block;
-}
+} */
 
 
 

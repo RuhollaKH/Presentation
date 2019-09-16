@@ -1,0 +1,35 @@
+body #impress #algorithm {
+    font-family: serif;
+    direction: rtl;
+    text-align:left
+  }
+  
+  body #impress #algorithm .alg_para .alg_bold {
+    font-weight: bold;
+    font-size: 24px !important;
+  }
+  
+  body #impress #algorithm .alg_para .alg_text_code {
+    font-size: 22px !important;
+  }
+  
+  body #impress #algorithm .alg_code {
+    font-family: serif;
+    /* margin-left: 20px; */
+    font-size: 20px !important;
+    font-style: italic;
+  }
+  
+  body #impress #algorithm .alg_no_code {
+    font-style: normal;
+    font-size: 22px !important;
+  }
+  
+  body #impress #algorithm .alg_space {
+    margin-left: 40px;
+  }
+  /*# sourceMappingURL=style.css.map */
+
+
+
+  

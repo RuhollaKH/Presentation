@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="./css/impress-demo.css">
+    <link rel="stylesheet" href="./css/extra.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/impress-TFA.css">
+    <link rel="stylesheet" href="./css/lib/faws/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/pseudocode.css">
+    <link rel="stylesheet" href="./css/prism.css">
+
+    <script src="js/prism.js"></script>
+    <!--  =========================================================== -->
+<!-- ---------------------------- Scripts ----------------------- -->
+<!--  =========================================================== -->
+<script type="text/x-mathjax-config">
+    //
+    //  Do NOT use this page as a template for your own pages.  It includes
+    //  code that is needed for testing your site's installation of MathJax,
+    //  and that should not be used in normal web pages.  Use sample.html as
+    //  the example for how to call MathJax in your own pages.
+    //
+      MathJax.HTML.Cookie.Set("menu",{});
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          availableFonts:[],
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        }
+      });
+      MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
+        var FONT = MathJax.OutputJax["HTML-CSS"].Font;
+        FONT.loadError = function (font) {
+          MathJax.Message.Set("Can't load web font TeX/"+font.directory,null,2000);
+          document.getElementById("noWebFont").style.display = "";
+        };
+        FONT.firefoxFontError = function (font) {
+          MathJax.Message.Set("Firefox can't load web fonts from a remote host",null,3000);
+          document.getElementById("ffWebFont").style.display = "";
+        };
+      });
+    (function (HUB) {
+    
+      var MINVERSION = {
+        Firefox: 3.0,
+        Opera: 9.52,
+        MSIE: 6.0,
+        Chrome: 0.3,
+        Safari: 2.0,
+        Konqueror: 4.0,
+        Unknown: 10000.0 // always disable unknown browsers
+      };
+    
+      if (!HUB.Browser.versionAtLeast(MINVERSION[HUB.Browser]||0.0)) {
+        HUB.Config({
+          jax: [],                   // don't load any Jax
+          extensions: [],            // don't load any extensions
+          "v1.0-compatible": false   // skip warning message due to no jax
+        });
+        setTimeout('document.getElementById("badBrowser").style.display = ""',0);
+      }
+    
+    })(MathJax.Hub);
+    MathJax.Hub.Register.StartupHook("End",function () {
+      var HTMLCSS = MathJax.OutputJax["HTML-CSS"];
+      if (HTMLCSS && HTMLCSS.imgFonts) {document.getElementById("imageFonts").style.display = ""}
+    });
+    </script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    
+    <script type="text/javascript" src="./js/MathJax.js"></script>
+    <!-- <script src="lib/iimpress.js"></script> -->
+    <script src="lib/jquery-2.1.1.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="./js/awosome.js"></script>
+    <script src="./js/prism.js"></script>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+
     <title>Document</title>
 </head>
 <body>
+    <pre><code class="language-latex">
+            ‎\REQUIRE{The seed $s=m\in \mathbb{Z}_{\ell  ^e}^*$ such that $\ell \nmid m$‎, ‎$k\in \mathbb{N}$.}‎
+            ‎\ENSURE{The strings {\textit {$output_0,\ldots,output_k$}}‎ }
+            ‎%\Procedure{Euclid}{$a,b$}\Comment{The g.c.d‎. ‎of a and b}‎
+             $m_0=m‎, ‎i=0;$‎
+             $P_0=P‎, ‎Q_0=Q‎, ‎K_0=K‎, ‎M_0=M;$‎
+            ‎ While {$i\leq k$}‎
+                $P'=P_i+m_iQ_i;$‎
+                $\phi‎: ‎M_i\rightarrow M'=M_i/\langle P'\rangle;$‎
+                Suppose $M'‎: ‎by^2=cx^3+ax+c$ where $a=a_1+a_2i‎, ‎c=c_1+c_2i$ and $j=j(M')=j_1+j_2i$‎.
+                $output_i=f(j);$%\Comment{$f$ is a hard-core predicate.}‎
+                $i=i+1;$‎
+                $m_i=a_1+a_2+c_1+c_2+j_1+j_2;$%\Comment{$g$ is a function.}‎
+                $M_i=M';$‎
+                Compute $P_i,Q_i$ s.t $M_i[\ell^e]=\langle P_i,Q_i\rangle$‎
+            ‎\ENDWHILE‎
+            ‎\RETURN $output_0,\ldots,output_k;$‎
+    </code></pre>
     <ul type='disc'>
         <li class="animated hinge">dsfdsf</li>
         <li>sdfsdfsd</li>
@@ -16,3 +118,32 @@
     
 </body>
 </html>
+
+
+<div id=algorithm>
+
+  <p class="alg_para">
+    <span class="alg_bold"> Input :</span> 
+    <span class='text_code'> The seed $s = m \in \mathbb{Z}^{*}_{\ell^e}$ such that $\ell | ?? m,k \in \mathbb{N}$. </span>
+   </p>
+   <p class="alg_para">
+    <span class="alg_bold"> Output :</span>
+    <span class='text_code'>The strings $ output_0 \dots output_k $</span>
+   </p>
+   <p class="alg_code"> $ m_0 = m, i=0; $ </p>
+   <p class="alg_code"> $ P_0=P, Q_0=Q, K_0=K, M_0=M; $ </p>
+   <p class="alg_code"> <b> while </b> $  ~ i \leq k ~  $ <b> do </b></p>
+   <p class="alg_code alg_space"> $  P' = P_i + m_iQ_i; $ </p>
+   <p class="alg_code alg_space"> $  \Phi : M_i \rightarrow M' = M_i / \langle P' \rangle ; $ </p>
+   <p class="alg_code alg_space"> <span class="no_alg_code"> Suppose </span> &nbsp;  $M' : by^2 = cx^3 + ax + c$ where $a=a_1+a_2i, c=c_1+c_2i$ <span class="no_alg_code"> and </span> </p>
+   <p class="alg_code alg_space"> $ j-j(M') = j_1+j_2i. $ </p>
+   <p class="alg_code alg_space"> $ output_i = f(j); $ </p>
+   <p class="alg_code alg_space"> $ i=i+1; $ </p>
+   <p class="alg_code alg_space"> $ m_i = a_1+a_2+c_1+c_2+j_1+j_2; $ </p>
+   <p class="alg_code alg_space"> $ M_i=M'; $ </p>
+   <p class="alg_code alg_space"> Compute $ P_i,Q_i ~ s.t ~ M_i [ \ell^e ] = \langle P_i,Q_i \rangle $ </p>
+   <p class="alg_code"> <b>end  while </b> </p>
+   <p class="alg_code"> <b>return </b> $ output_0, \dots , output_k $ </p>
+      
+   <!-- <p class='page_number' style="text-align:center">19</p> -->
+</div>
